@@ -1,0 +1,9 @@
+Create a venv: python3 -m venv [project name or venv or followed by _venv]
+Make a venv so it can use global packages: python3 -m venv venv
+Activate project venv with: 'source [venv name]/bin/activate
+Deactivate venv: deactivate
+To delete that environment: rm -rf [venv name]
+
+
+Note: A virtual machine has its own python path. Set the interpreter with ctrl + p, then click on interpreter, then find this location:
+ Ex. venv -> bin -> python3.10
