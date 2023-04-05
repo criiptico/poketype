@@ -5,5 +5,5 @@ Deactivate venv: deactivate
 To delete that environment: rm -rf [venv name]
 
 
-Note: A virtual machine has its own python path. Set the interpreter with ctrl + p, then click on interpreter, then find this location:
+Note: A virtual machine has its own python path. Set the interpreter with ctrl + shift + p, then click on interpreter, then find this location:
  Ex. venv -> bin -> python3.10
