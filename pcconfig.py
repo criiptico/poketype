@@ -1,10 +1,10 @@
 import pynecone as pc
 
-class MainConfig(pc.Config):
+class PoketypeConfig(pc.Config):
     pass
 
-config = MainConfig(
-    app_name="main",
+config = PoketypeConfig(
+    app_name="poketype",
     db_url="sqlite:///pynecone.db",
     env=pc.Env.DEV,
 )
