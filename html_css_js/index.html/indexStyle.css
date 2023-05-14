@@ -1,0 +1,25 @@
+/* html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  } */
+  /* * {
+    border: 1px solid greenyellow;
+  } */
+  html{
+      background-color: maroon;
+  }
+.test{
+    border: 1px solid white;
+    border-width: 5px;
+    padding: 10px;
+    margin: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: lightblue;
+    text-align: center;
+    /* box-sizing: border-box; */
+    /* color: white; */
+}
