@@ -1,25 +1,79 @@
-/* html {
-    box-sizing: border-box;
-  }
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  } */
-  /* * {
-    border: 1px solid greenyellow;
-  } */
+/* 
+
+Pallette:
+2B2D42
+8D99AE
+EDF2F4
+EF233C
+D90429
+
+
+f0f0f0
+
+*/
+
+
   html{
-      background-color: maroon;
+      background-color: #8D99AE;
   }
-.test{
-    border: 1px solid white;
-    border-width: 5px;
-    padding: 10px;
-    margin: 2px;
+
+.PokeType{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: lightblue;
     text-align: center;
-    /* box-sizing: border-box; */
-    /* color: white; */
+    
+
+    /* margin-left: 150px; */
+}
+
+#pokeball {
+  width: 50px;
+  height: 50px;
+  /* margin-left: 35px; */
+  background-image:url(pokeball.png);
+}
+
+
+.boxed {
+  border: 1.75px solid white;
+  padding: auto;
+  margin: 25px;
+  background-color: #2B2D42;
+  /* margin: auto; */
+}
+
+.pokeBall {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.top {
+  /* flex-grow: 1; */
+  background-color: #D90429;
+  /* width: 100px; */
+  width: auto;
+  height: auto;
+  padding: 50px 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mid {
+  background-color: #2B2D42;
+  width: auto;
+  height: auto;
+  padding: 50px 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bot {
+  background-color: #EDF2F4;
+  width: auto;
+  height: auto;
+  padding: 50px 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
