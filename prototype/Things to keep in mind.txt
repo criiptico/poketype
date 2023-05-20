@@ -1,0 +1,8 @@
+Look for these sections in the api:
+	Use Moves:Moves section
+	Use Moves:Moves Damage Classes
+	Use Moves:Moves Ailments
+
+
+Need to make a pokemon type chart function.
+https://pokemondb.net/type/dual
