@@ -35,8 +35,11 @@ f0f0f0
 
 
 .boxed {
-  border: 1.75px solid white;
-  padding: auto;
+  border: 1.75px solid white; 
+  border-radius: 25% 10%;
+  /* width:max-content; */
+  /* align-self: center; */
+  padding: 50px;
   margin: 25px;
   background-color: #2B2D42;
   /* margin: auto; */
