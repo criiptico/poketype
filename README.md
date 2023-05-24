@@ -1,6 +1,6 @@
 
 # Poketype:
-Poketype is a web-application that takes two pokemon and gives you the most effective move in terms of move type and damage dealt to the each pokemon.
+Poketype is a web-application that takes two pokemon and gives you the most effective move in terms of move type and damage dealt to each pokemon.
 
 ###### Please note: This is a work in progress build and I'm learning these technologies along the way. This is my first time dealing with python, html forms, and Flask in the context of a web application. I appreciate your patience.
 
