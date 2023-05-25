@@ -6,3 +6,9 @@ Look for these sections in the api:
 
 Need to make a pokemon type chart function.
 https://pokemondb.net/type/dual
+
+
+
+Read this article to learn to make a better makefile, even though this 
+one is fine, another one might be better:
+https://earthly.dev/blog/python-makefile/
