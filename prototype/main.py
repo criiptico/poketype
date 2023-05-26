@@ -21,6 +21,15 @@ import aiopoke
 #         growth = berry.growth_time
 #         print(growth)
 
+def parser(moves):
+    print("These are the parsed moves of the pokemon:")
+    for i in range(moves):
+        currentString = ""
+        if moves[i] != ' ':
+            print("what")
+            
+    
+
 # You can only access api through these two lines. Treat this as the main function.
 async def main() -> None:
     async with aiopoke.AiopokeClient() as client:
@@ -30,8 +39,9 @@ async def main() -> None:
         # ability = await client.get_berry_firmness("chesto")
         # print(ability)
         print("Pokemon: " + pokemon.name)
-        print("Pokemon abilities: ")
+        print("Pokemon moves: ")
         print(pokemon.moves)
+        parser(pokemon.moves)
         
         
 
