@@ -6,6 +6,7 @@
 
 import asyncio
 import aiopoke
+import json
 
 # Below is test code
 # async def main() -> None:
@@ -20,30 +21,24 @@ import aiopoke
 #         print(berry.item.name)
 #         growth = berry.growth_time
 #         print(growth)
-
-# def parser(data, toFind):
-#     for i in range(len(data)):
-#         if data[i:i+11] == "PomemonMove":
-            
-
-# def moveLocator(pokemon, moves):
     
 
 # The input should be everything after PokemonMove and up to the next PokemonMove or a \n
-def moveLocator(pokemon, moves, moveSet): # What data type is moves??? Is moves a list?
+def loadMoves(pokemon, moves, moveSet): # What data type is moves??? Is moves a list?
     count = 0
-    print("These are the parsed moves of the pokemon:")
-    for i in moves: # In response to line 40, it seems that each PokemonMove string is an iterative string with respect to PokemonMove
-        # currentString = ""
-        print(str(i) + " times iterating through the string.")
-        print("At " + str(moves[i]) + " right now.")
-        if moves[i:i+11] == "PokemonMove": # new move found # Wait a minute, how is this working?
-            # != changes the counter and == doesn't. So it isn't reading correctly?
-            print("Move found.")
-            count+=1
-    print("Pokemon " + pokemon + " has " + str(count) + " possible move(s).")
-            
-    
+    for i in moves: 
+        currentMove = str(i)
+        moveIt = str(i).find(',')
+        findMoves(str(i), ',', 3)
+        # print(str(i))
+
+def findMoves(s, toFind, n):
+    itFind = s.find(toFind)
+    itName = s.find("name=") + 6
+    i = 0
+    for i in range(n):
+        itFind = s.find(toFind, itFind + 1)
+    print(s[itName:itFind - 2])
 
 # You can only access api through these two lines. Treat this as the main function.
 async def main() -> None:
@@ -54,11 +49,9 @@ async def main() -> None:
         # ability = await client.get_ability(search)
         # ability = await client.get_berry_firmness("chesto")
         # print(ability)
+        # json.loads(pokemon.moves)
         print("Pokemon: " + pokemon.name)
         print("Pokemon moves: ")
-        print(pokemon.moves)
-        moveLocator(pokemon.name, pokemon.moves, moveSet)
-        
-        
+        loadMoves(pokemon.name, pokemon.moves, moveSet)
 
 asyncio.run(main())

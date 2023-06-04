@@ -3,7 +3,8 @@
 	As of now, I've discovered that 
 	(- now that I think about it, I should consider using jupyter notebooks, 
 	but md is good to learn too, but anyway,) when I retrieve pokemon.moves on lines 59 
-	and 60, it actually retrieves a... something that I think is a json object. Notice output.txt. I've been messing with the main python file and trying to figure out 
+	and 60, it actually retrieves a... something that I think is a json object. Notice output.txt. 
+	I've been messing with the main python file and trying to figure out 
 	how to parse through it, but the issue is that it doesn't read each character of 
 	each line, instead it sort of reads an object...?
 	Anyway, here are some links to get started researching:
