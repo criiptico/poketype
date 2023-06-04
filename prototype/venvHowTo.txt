@@ -4,6 +4,10 @@ Activate project venv with: 'source [venv name]/bin/activate
 Deactivate venv: deactivate
 To delete that environment: rm -rf [venv name]
 
+To copy and paste venvs:
+    To copy from a current venv: pip freeze > requirements.txt
+    [create a new venv]
+    Create a new venv with the previous' venv's packages: pip install -r requirements.txt
 
 
 Note: A virtual machine has its own python path. Set the interpreter with ctrl + p, then click on interpreter, then find this location:
