@@ -1,2 +1,1 @@
-Enter pokemon 1: Enter pokemon 2: cheri
-chesto
+Enter pokemon 1: Enter pokemon 2: 

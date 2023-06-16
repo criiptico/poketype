@@ -20,7 +20,12 @@ import aiopoke
 #         print(berry.item.name)
 #         growth = berry.growth_time
 #         print(growth)
+
+#         pokemon = await client.get_pokemon('pikachu')
+#         print(pokemon.name)
+
     
+
 
 # The input should be everything after PokemonMove and up to the next PokemonMove or a \n
 def loadMoves(pokemon, moves, moveMap): # What data type is moves??? Is moves a list?
@@ -31,7 +36,6 @@ def loadMoves(pokemon, moves, moveMap): # What data type is moves??? Is moves a 
         findMoves(str(i), ',', 3, moveMap)
         # print(str(i))
     return moveMap
-
 
 def findMoves(s, toFind, n, moveMap):
     itFind = s.find(toFind)
@@ -69,19 +73,26 @@ async def main() -> None:
     async with aiopoke.AiopokeClient() as client:
         pokemonOneMoves = {}
         pokemonTwoMoves = {}
+
         # search = 'pikachu'
         # pokemon = await client.get_pokemon(search)
         # ability = await client.get_ability(search)
-        # ability = await client.get_berry_firmness("chesto")
-        # print(ability)
-        # json.loads(pokemon.moves)
+        # berry_firmness = await client.get_berry_firmness(1)
+        # print(pokemon.name)
+        # print(berry_firmness.name)
+
         opponentOne = input("Enter pokemon 1: ")
         opponentTwo  = input("Enter pokemon 2: ")
+        # opponentOne = 1
+        # opponentTwo = 2
         opponentOne = opponentOne.lower()
         opponentTwo = opponentTwo.lower()
 
+        # ability1 = await client.get_ability(opponentOne)
+        # print(ability1.name)
+
         pokemonOne = await client.get_pokemon(opponentOne)
-        pokemonTwo = await client.get_pokemon(opponentTwo)        
+        pokemonTwo = await client.get_pokemon(opponentTwo)
 
         loadMoves(pokemonOne.name, pokemonOne.moves, pokemonOneMoves)
         loadMoves(pokemonTwo.name, pokemonTwo.moves, pokemonTwoMoves)

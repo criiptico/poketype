@@ -1,5 +1,22 @@
 # Notes:
 
+
+##### 06/16/23: pokeAPI Changes
+	I legigimately have no idea why, but I can't use the get_pokemon function from the client.
+	So I'm considering using another pokemon api to get this data.
+
+	Here is the link the the api wrapper I'm considering:
+	https://pokeapi.github.io/pokepy/usage/#api
+	Here is the link to the repo:
+	https://github.com/PokeAPI/pokepy
+	
+	Thankfully, I haven't delved too far into this project- and it doesn't look like this one uses asyncio,
+	so it'll be less of a hassle. It also looks like it was made by Paul Hallett, who was the founder of the
+	the original pokeapi... so I probably should have gone with this more stable version- I don't know why 
+	get_pokemon isn't working... it worked before, but here we are now. I'll make the change by Monday.
+
+
+
 ##### 06/06/23
 	So, I've organized a way to input a pokemon's moves and created a way to dump all their moves.
 	The next steps are as shown below:
