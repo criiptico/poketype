@@ -69,7 +69,7 @@ def dumpMoves(pokeName, moves):
 
 
 # You can only access api through these two lines. Treat this as the main function.
-async def main() -> None:
+async def main():
     async with aiopoke.AiopokeClient() as client:
         pokemonOneMoves = {}
         pokemonTwoMoves = {}
@@ -85,18 +85,16 @@ async def main() -> None:
         opponentTwo  = input("Enter pokemon 2: ")
         # opponentOne = 1
         # opponentTwo = 2
-        opponentOne = opponentOne.lower()
-        opponentTwo = opponentTwo.lower()
+        # opponentOne = opponentOne.lower()
 
         # ability1 = await client.get_ability(opponentOne)
         # print(ability1.name)
 
         pokemonOne = await client.get_pokemon(opponentOne)
-        pokemonTwo = await client.get_pokemon(opponentTwo)
-
         loadMoves(pokemonOne.name, pokemonOne.moves, pokemonOneMoves)
-        loadMoves(pokemonTwo.name, pokemonTwo.moves, pokemonTwoMoves)
 
+        pokemonTwo = await client.get_pokemon(opponentTwo)
+        loadMoves(pokemonTwo.name, pokemonTwo.moves, pokemonTwoMoves)
 
         # Search moves' base damage | Make another dict with the id and the move's base damage?
         # Develop type chart matrix, function, and txt file to read from.

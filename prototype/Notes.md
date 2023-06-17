@@ -2,8 +2,8 @@
 
 
 ##### 06/16/23: pokeAPI Changes
-	I legigimately have no idea why, but I can't use the get_pokemon function from the client.
-	So I'm considering using another pokemon api to get this data.
+	I legigimately have no idea why, but I can't use the get_pokemon function from the aiopoke api.
+	So, I'm considering using another pokemon api wrapper to get this data.
 
 	Here is the link the the api wrapper I'm considering:
 	https://pokeapi.github.io/pokepy/usage/#api
