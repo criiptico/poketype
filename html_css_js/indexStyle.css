@@ -14,16 +14,28 @@ f0f0f0
 
 
   html{
-      background-color: #8D99AE;
+      /* background-color: #8D99AE; */
+      background-color: #2B2D42;
   }
 
 .PokeType{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: lightblue;
+    color: #FAFAFA; /* Add it to the new pallete? */
     text-align: center;
-    
+    left: 300px;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    /* box-shadow: 0 0 10px #fff; */
+    width:fit-content;
+
 
     /* margin-left: 150px; */
+}
+
+.PokeType:hover{
+  transform: translateY(-5px);
+  text-decoration:underline #b4bcc0;
+  /* box-shadow: 0 0 10px #fff, 0 0 10px #fff inset; */
 }
 
 #pokeball {
@@ -35,26 +47,36 @@ f0f0f0
 
 
 .boxed {
-  border: 1.75px solid white; 
-  border-radius: 25% 10%;
+  /* border: 1.75px solid white;  */
+  /* border-radius: 25% 10%; */
   /* width:max-content; */
   /* align-self: center; */
-  padding: 50px;
+  padding: 20px;
   margin: 25px;
-  background-color: #2B2D42;
+  /* background-color: #2B2D42; */
   /* margin: auto; */
 }
 
 .pokeBall {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  min-height: 100vh;
+  /* position:relative;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 0 10px #fff; */
+  /* flex-wrap: wrap; */
+  /* min-height: 100vh; */
+  /* @keyframes title:hover{
+    0% {top: 0px}
+    25% {top: 100px}
+    75% {bot: 100px}
+    100% {bot: 0px}
+    
+  } */
 }
 
 .top {
   /* flex-grow: 1; */
-  background-color: #D90429;
+  background-color: #b9102c;
   /* width: 100px; */
   width: auto;
   height: auto;
@@ -64,7 +86,7 @@ f0f0f0
 }
 
 .mid {
-  background-color: #2B2D42;
+  background-color: #2f3148;
   width: auto;
   height: auto;
   padding: 50px 100px;
@@ -73,7 +95,7 @@ f0f0f0
 }
 
 .bot {
-  background-color: #EDF2F4;
+  background-color: #dfe5e8;
   width: auto;
   height: auto;
   padding: 50px 100px;

@@ -1,5 +1,10 @@
 # Notes:
 
+##### 06/22/23: front end
+	Since the back end is experiencing some... issues ;-; it's time to get back to working on the
+	front end, at least for now. One thing for sure, I'd love to make this more modern.
+	But how?! I also need to figure out how to use python and flask. So I guess that's what I'll
+	do next. 
 
 ##### 06/16/23: pokeAPI Changes
 	I legigimately have no idea why, but I can't use the get_pokemon function from the aiopoke api.
