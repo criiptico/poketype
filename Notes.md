@@ -1,5 +1,38 @@
 # Notes:
 
+##### PaaS and other cloud environments:
+	Huh, it looks like the back end of sites is a bit complicated. I'm still
+	a bit confused on one thing. Is this where the site is launching? Environments with PaaS are run online on servers, but I have no idea
+	if it actually launches a server. So I think they do launch the website.
+	So, the two PaaS that I'm looking into to use are https://caprover.com and https://dokku.com 
+	It looks like I can develop as I go for dokku, so I think that one 
+	might be the bese one for me since I want to make sure I can develop 
+	it... in real time if I need to.
+	On another note, I stumbled on this https://asciinema.org/ it records from the terminal and it's free.
+	^ It's pretty cool, neat, and useful.
+	Lastly, this https://www.pythonanywhere.com/ is also an option.
+
+##### NEW PLAN:
+	Develop the application with github and flask, but find a remote server or make
+	a local server to launch the site. There's no exception.
+
+##### 06/24/23: Can't run flask.
+	So I can't use flask because it launches a server on its own. 
+	That is the issue. So since the plan is to launch this app
+	with GitHub pages, I guess my only choice is to learn how to 
+	use php.
+	CORRECTION: GitHub Pages only supports static websites. Static websites
+	are websites that display content exactly as it's stored in the system it's
+	serving it from. So..... I can still make it with flask, but I won't be able
+	to launch it through GitHub pages, instead a remote server or a local server 
+	woule work best. Well, that is a dealbreaker.
+
+##### 06/23/23: Flask resources
+	Just a couple of recources to learn flask.
+	https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
+	https://flask.palletsprojects.com/en/2.3.x/quickstart/
+	
+
 ##### 06/22/23: front end
 	Since the back end is experiencing some... issues ;-; it's time to get back to working on the
 	front end, at least for now. One thing for sure, I'd love to make this more modern.

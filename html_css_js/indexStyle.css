@@ -12,7 +12,12 @@ f0f0f0
 
 */
 
-
+/* div {
+  align-items: center;
+} */
+a:link{
+  color:#dfe5e8; 
+}
   html{
       /* background-color: #8D99AE; */
       background-color: #2B2D42;
@@ -22,12 +27,14 @@ f0f0f0
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #FAFAFA; /* Add it to the new pallete? */
     text-align: center;
-    left: 300px;
+    /* left: 300px; */
     position: relative;
+    /* align-items: center; */
     transition: transform 0.2s ease-in-out;
     /* box-shadow: 0 0 10px #fff; */
     width:fit-content;
-
+    justify-content: center;
+    /* display: flex; */
 
     /* margin-left: 150px; */
 }
@@ -41,20 +48,23 @@ f0f0f0
 #pokeball {
   width: 50px;
   height: 50px;
-  /* margin-left: 35px; */
+  align-items: center;
+  position: absolute;
+  bottom: -15px;
   background-image:url(pokeball.png);
 }
 
 
 .boxed {
+  width:max-content;
+  padding: 40px;
+  margin: auto;
+
   /* border: 1.75px solid white;  */
   /* border-radius: 25% 10%; */
-  /* width:max-content; */
   /* align-self: center; */
-  padding: 20px;
-  margin: 25px;
+  /* margin: 25px; */
   /* background-color: #2B2D42; */
-  /* margin: auto; */
 }
 
 .pokeBall {
@@ -65,40 +75,45 @@ f0f0f0
   box-shadow: 0 0 10px #fff; */
   /* flex-wrap: wrap; */
   /* min-height: 100vh; */
-  /* @keyframes title:hover{
-    0% {top: 0px}
-    25% {top: 100px}
-    75% {bot: 100px}
-    100% {bot: 0px}
-    
-  } */
 }
 
 .top {
   /* flex-grow: 1; */
+  text-align: center;
   background-color: #b9102c;
-  /* width: 100px; */
+  width: 100px;
+  max-width: 500px;
+  min-width: 200px;
   width: auto;
   height: auto;
   padding: 50px 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin:auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 
 .mid {
+  text-align: center;
   background-color: #2f3148;
   width: auto;
+  max-width: 500px;
+  min-width: 200px;
   height: auto;
   padding: 50px 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin:auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 
 .bot {
+  text-align: center;
   background-color: #dfe5e8;
   width: auto;
   height: auto;
+  max-width: 500px;
+  min-width: 200px;
   padding: 50px 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin:auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
