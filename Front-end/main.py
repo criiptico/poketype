@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='Styles')
 
 # It's not launching...
 # Is the issue that it doesn't have the required files? css and jpg for example?
