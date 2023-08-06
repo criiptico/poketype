@@ -89,17 +89,17 @@ async def main():
         opponentTwo = await client.get_pokemon(pokemonTwo)
         loadMoves(opponentTwo.name, opponentTwo.moves, opponentTwoMoves)
 
-        await loadBaseDamage(opponentOne, opponentOneMoves)
-        await loadBaseDamage(opponentTwo, opponentTwoMoves)
+        # await loadBaseDamage(opponentOne, opponentOneMoves)
+        # await loadBaseDamage(opponentTwo, opponentTwoMoves)
 
 
         # Note: Make a min and max heap for each pokemon with respect to their opposing pokemon
         ## The idea is to make a min and max of moves that are most effective for each pokemon
         ## against the pokemon they're against.
-        oneMin = [None] * len(opponentOneMoves)
-        oneMax = [None] * len(opponentOneMoves)
-        twoMin = [None] * len(opponentTwoMoves)
-        twoMax = [None] * len(opponentTwoMoves)
+        # oneMin = [None] * len(opponentOneMoves)
+        # oneMax = [None] * len(opponentOneMoves)
+        # twoMin = [None] * len(opponentTwoMoves)
+        # twoMax = [None] * len(opponentTwoMoves)
 
 
         # Search moves' base damage | Make another dict with the id and the move's base damage?
