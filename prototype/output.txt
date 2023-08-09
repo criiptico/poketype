@@ -1,215 +1,467 @@
-Enter pokemon 1: Enter pokemon 2: Pokemon 1: lucario
+Enter pokemon 1: Enter pokemon 2: Pokemon 1: pikachu
 Pokemon 1 moves: 
-lucario has 110 moves.
+pikachu has 101 moves.
 ID: Name:
 5 -> mega-punch
-8 -> ice-punch
+6 -> pay-day
 9 -> thunder-punch
-14 -> swords-dance
+21 -> slam
+24 -> double-kick
 25 -> mega-kick
 29 -> headbutt
 34 -> body-slam
 36 -> take-down
-46 -> roar
-63 -> hyper-beam
-67 -> low-kick
-68 -> counter
-70 -> strength
-89 -> earthquake
-91 -> dig
-92 -> toxic
-94 -> psychic
-97 -> agility
-98 -> quick-attack
-103 -> screech
-104 -> double-team
-116 -> focus-energy
-118 -> metronome
-129 -> swift
-156 -> rest
-157 -> rock-slide
-164 -> substitute
-173 -> snore
-179 -> reversal
-182 -> protect
-184 -> scary-face
-189 -> mud-slap
-193 -> foresight
-197 -> detect
-198 -> bone-rush
-203 -> endure
-207 -> swagger
-210 -> fury-cutter
-213 -> attract
-214 -> sleep-talk
-216 -> return
-218 -> frustration
-231 -> iron-tail
-232 -> metal-claw
-237 -> hidden-power
-240 -> rain-dance
-241 -> sunny-day
-242 -> crunch
-245 -> extreme-speed
-247 -> shadow-ball
-249 -> rock-smash
-263 -> facade
-264 -> focus-punch
-270 -> helping-hand
-272 -> role-play
-279 -> revenge
-280 -> brick-break
-290 -> secret-power
-299 -> blaze-kick
-309 -> meteor-mash
-317 -> rock-tomb
-319 -> metal-sound
-332 -> aerial-ace
-334 -> iron-defense
-339 -> bulk-up
-347 -> calm-mind
-352 -> water-pulse
-363 -> natural-gift
-364 -> feint
-370 -> close-combat
-371 -> payback
-374 -> fling
-382 -> me-first
-383 -> copycat
-393 -> magnet-rise
-395 -> force-palm
-396 -> aura-sphere
-398 -> poison-jab
-399 -> dark-pulse
-406 -> dragon-pulse
-409 -> drain-punch
-410 -> vacuum-wave
-411 -> focus-blast
-416 -> giga-impact
-417 -> nasty-plot
-421 -> shadow-claw
-428 -> zen-headbutt
-430 -> flash-cannon
-431 -> rock-climb
-444 -> stone-edge
-445 -> captivate
-468 -> hone-claws
-490 -> low-sweep
-496 -> round
-501 -> quick-guard
-505 -> heal-pulse
-514 -> retaliate
-515 -> final-gambit
-523 -> bulldoze
-526 -> work-up
-530 -> dual-chop
-590 -> confide
-612 -> power-up-punch
-673 -> laser-focus
-791 -> life-dew
-796 -> steel-beam
-805 -> terrain-pulse
-811 -> coaching
-851 -> tera-blast
-885 -> trailblaze
-
-Pokemon 2: vaporeon
-Pokemon 2 moves: 
-vaporeon has 96 moves.
-ID: Name:
-6 -> pay-day
-24 -> double-kick
-28 -> sand-attack
-29 -> headbutt
-33 -> tackle
-34 -> body-slam
-36 -> take-down
 38 -> double-edge
 39 -> tail-whip
-44 -> bite
 45 -> growl
-46 -> roar
-54 -> mist
-55 -> water-gun
-56 -> hydro-pump
 57 -> surf
-58 -> ice-beam
-59 -> blizzard
-61 -> bubble-beam
-62 -> aurora-beam
-63 -> hyper-beam
+66 -> submission
+68 -> counter
+69 -> seismic-toss
 70 -> strength
+84 -> thunder-shock
+85 -> thunderbolt
+86 -> thunder-wave
+87 -> thunder
 91 -> dig
 92 -> toxic
+97 -> agility
 98 -> quick-attack
 99 -> rage
 102 -> mimic
 104 -> double-team
-114 -> haze
+111 -> defense-curl
+113 -> light-screen
 115 -> reflect
-116 -> focus-energy
 117 -> bide
-127 -> waterfall
 129 -> swift
 130 -> skull-bash
-151 -> acid-armor
+148 -> flash
 156 -> rest
+164 -> substitute
+168 -> thief
+173 -> snore
+174 -> curse
+179 -> reversal
+182 -> protect
+186 -> sweet-kiss
+189 -> mud-slap
+192 -> zap-cannon
+197 -> detect
+203 -> endure
+204 -> charm
+205 -> rollout
+207 -> swagger
+209 -> spark
+213 -> attract
+214 -> sleep-talk
+216 -> return
+218 -> frustration
+223 -> dynamic-punch
+227 -> encore
+231 -> iron-tail
+237 -> hidden-power
+240 -> rain-dance
+249 -> rock-smash
+253 -> uproar
+263 -> facade
+264 -> focus-punch
+270 -> helping-hand
+280 -> brick-break
+282 -> knock-off
+290 -> secret-power
+313 -> fake-tears
+324 -> signal-beam
+343 -> covet
+344 -> volt-tackle
+347 -> calm-mind
+351 -> shock-wave
+363 -> natural-gift
+364 -> feint
+374 -> fling
+393 -> magnet-rise
+417 -> nasty-plot
+435 -> discharge
+445 -> captivate
+447 -> grass-knot
+451 -> charge-beam
+486 -> electro-ball
+496 -> round
+497 -> echoed-voice
+521 -> volt-switch
+527 -> electroweb
+528 -> wild-charge
+574 -> disarming-voice
+577 -> draining-kiss
+583 -> play-rough
+589 -> play-nice
+590 -> confide
+598 -> eerie-impulse
+604 -> electric-terrain
+609 -> nuzzle
+673 -> laser-focus
+804 -> rising-voltage
+851 -> tera-blast
+885 -> trailblaze
+
+Pokemon 2: charizard
+Pokemon 2 moves: 
+charizard has 125 moves.
+ID: Name:
+5 -> mega-punch
+7 -> fire-punch
+9 -> thunder-punch
+10 -> scratch
+14 -> swords-dance
+15 -> cut
+17 -> wing-attack
+19 -> fly
+25 -> mega-kick
+29 -> headbutt
+34 -> body-slam
+36 -> take-down
+38 -> double-edge
+43 -> leer
+45 -> growl
+46 -> roar
+52 -> ember
+53 -> flamethrower
+63 -> hyper-beam
+66 -> submission
+68 -> counter
+69 -> seismic-toss
+70 -> strength
+76 -> solar-beam
+82 -> dragon-rage
+83 -> fire-spin
+89 -> earthquake
+90 -> fissure
+91 -> dig
+92 -> toxic
+99 -> rage
+102 -> mimic
+104 -> double-team
+108 -> smokescreen
+111 -> defense-curl
+115 -> reflect
+117 -> bide
+126 -> fire-blast
+129 -> swift
+130 -> skull-bash
+154 -> fury-swipes
+156 -> rest
+157 -> rock-slide
+163 -> slash
 164 -> substitute
 173 -> snore
 174 -> curse
 182 -> protect
+184 -> scary-face
 189 -> mud-slap
-196 -> icy-wind
-197 -> detect
+200 -> outrage
+201 -> sandstorm
 203 -> endure
-204 -> charm
+206 -> false-swipe
 207 -> swagger
+210 -> fury-cutter
+211 -> steel-wing
 213 -> attract
 214 -> sleep-talk
-215 -> heal-bell
 216 -> return
 218 -> frustration
-226 -> baton-pass
+223 -> dynamic-punch
+225 -> dragon-breath
 231 -> iron-tail
+232 -> metal-claw
 237 -> hidden-power
-240 -> rain-dance
+239 -> twister
 241 -> sunny-day
-247 -> shadow-ball
+242 -> crunch
 249 -> rock-smash
-250 -> whirlpool
-258 -> hail
+251 -> beat-up
+257 -> heat-wave
+261 -> will-o-wisp
 263 -> facade
+264 -> focus-punch
 270 -> helping-hand
-281 -> yawn
+280 -> brick-break
 290 -> secret-power
-291 -> dive
-304 -> hyper-voice
+299 -> blaze-kick
+307 -> blast-burn
 311 -> weather-ball
-313 -> fake-tears
-324 -> signal-beam
-330 -> muddy-water
-343 -> covet
-347 -> calm-mind
-352 -> water-pulse
-362 -> brine
+314 -> air-cutter
+315 -> overheat
+317 -> rock-tomb
+332 -> aerial-ace
+337 -> dragon-claw
+349 -> dragon-dance
+355 -> roost
 363 -> natural-gift
-383 -> copycat
-387 -> last-resort
-392 -> aqua-ring
-401 -> aqua-tail
+366 -> tailwind
+374 -> fling
+394 -> flare-blitz
+403 -> air-slash
+406 -> dragon-pulse
+411 -> focus-blast
 416 -> giga-impact
+421 -> shadow-claw
+424 -> fire-fang
+432 -> defog
 445 -> captivate
+466 -> ominous-wind
+468 -> hone-claws
+481 -> flame-burst
+488 -> flame-charge
 496 -> round
 497 -> echoed-voice
-500 -> stored-power
-503 -> scald
-514 -> retaliate
+507 -> sky-drop
+510 -> incinerate
+512 -> acrobatics
+517 -> inferno
+519 -> fire-pledge
+523 -> bulldoze
+525 -> dragon-tail
 526 -> work-up
+535 -> heat-crash
+542 -> hurricane
 590 -> confide
-608 -> baby-doll-eyes
-673 -> laser-focus
-710 -> liquidation
-812 -> flip-turn
+595 -> mystical-fire
+612 -> power-up-punch
+693 -> brutal-swing
+784 -> breaking-swipe
+799 -> scale-shot
+814 -> dual-wingbeat
+815 -> scorching-sands
 851 -> tera-blast
-885 -> trailblaze
-886 -> chilling-water
+Displaying the damage of each move: 
+pikachu : 5 -> 80
+pikachu : 6 -> 40
+pikachu : 9 -> 75
+pikachu : 21 -> 80
+pikachu : 24 -> 30
+pikachu : 25 -> 120
+pikachu : 29 -> 70
+pikachu : 34 -> 85
+pikachu : 36 -> 90
+pikachu : 38 -> 120
+pikachu : 39 -> {}
+pikachu : 45 -> {}
+pikachu : 57 -> 90
+pikachu : 66 -> 80
+pikachu : 68 -> {}
+pikachu : 69 -> {}
+pikachu : 70 -> 80
+pikachu : 84 -> 40
+pikachu : 85 -> 90
+pikachu : 86 -> {}
+pikachu : 87 -> 110
+pikachu : 91 -> 80
+pikachu : 92 -> {}
+pikachu : 97 -> {}
+pikachu : 98 -> 40
+pikachu : 99 -> 20
+pikachu : 102 -> {}
+pikachu : 104 -> {}
+pikachu : 111 -> {}
+pikachu : 113 -> {}
+pikachu : 115 -> {}
+pikachu : 117 -> {}
+pikachu : 129 -> 60
+pikachu : 130 -> 130
+pikachu : 148 -> {}
+pikachu : 156 -> {}
+pikachu : 164 -> {}
+pikachu : 168 -> 60
+pikachu : 173 -> 50
+pikachu : 174 -> {}
+pikachu : 179 -> {}
+pikachu : 182 -> {}
+pikachu : 186 -> {}
+pikachu : 189 -> 20
+pikachu : 192 -> 120
+pikachu : 197 -> {}
+pikachu : 203 -> {}
+pikachu : 204 -> {}
+pikachu : 205 -> 30
+pikachu : 207 -> {}
+pikachu : 209 -> 65
+pikachu : 213 -> {}
+pikachu : 214 -> {}
+pikachu : 216 -> {}
+pikachu : 218 -> {}
+pikachu : 223 -> 100
+pikachu : 227 -> {}
+pikachu : 231 -> 100
+pikachu : 237 -> 60
+pikachu : 240 -> {}
+pikachu : 249 -> 40
+pikachu : 253 -> 90
+pikachu : 263 -> 70
+pikachu : 264 -> 150
+pikachu : 270 -> {}
+pikachu : 280 -> 75
+pikachu : 282 -> 65
+pikachu : 290 -> 70
+pikachu : 313 -> {}
+pikachu : 324 -> 75
+pikachu : 343 -> 60
+pikachu : 344 -> 120
+pikachu : 347 -> {}
+pikachu : 351 -> 60
+pikachu : 363 -> {}
+pikachu : 364 -> 30
+pikachu : 374 -> {}
+pikachu : 393 -> {}
+pikachu : 417 -> {}
+pikachu : 435 -> 80
+pikachu : 445 -> {}
+pikachu : 447 -> {}
+pikachu : 451 -> 50
+pikachu : 486 -> {}
+pikachu : 496 -> 60
+pikachu : 497 -> 40
+pikachu : 521 -> 70
+pikachu : 527 -> 55
+pikachu : 528 -> 90
+pikachu : 574 -> 40
+pikachu : 577 -> 50
+pikachu : 583 -> 90
+pikachu : 589 -> {}
+pikachu : 590 -> {}
+pikachu : 598 -> {}
+pikachu : 604 -> {}
+pikachu : 609 -> 20
+pikachu : 673 -> {}
+pikachu : 804 -> 70
+pikachu : 851 -> 80
+pikachu : 885 -> 50
+Displaying the damage of each move: 
+charizard : 5 -> 80
+charizard : 7 -> 75
+charizard : 9 -> 75
+charizard : 10 -> 40
+charizard : 14 -> {}
+charizard : 15 -> 50
+charizard : 17 -> 60
+charizard : 19 -> 90
+charizard : 25 -> 120
+charizard : 29 -> 70
+charizard : 34 -> 85
+charizard : 36 -> 90
+charizard : 38 -> 120
+charizard : 43 -> {}
+charizard : 45 -> {}
+charizard : 46 -> {}
+charizard : 52 -> 40
+charizard : 53 -> 90
+charizard : 63 -> 150
+charizard : 66 -> 80
+charizard : 68 -> {}
+charizard : 69 -> {}
+charizard : 70 -> 80
+charizard : 76 -> 120
+charizard : 82 -> {}
+charizard : 83 -> 35
+charizard : 89 -> 100
+charizard : 90 -> {}
+charizard : 91 -> 80
+charizard : 92 -> {}
+charizard : 99 -> 20
+charizard : 102 -> {}
+charizard : 104 -> {}
+charizard : 108 -> {}
+charizard : 111 -> {}
+charizard : 115 -> {}
+charizard : 117 -> {}
+charizard : 126 -> 110
+charizard : 129 -> 60
+charizard : 130 -> 130
+charizard : 154 -> 18
+charizard : 156 -> {}
+charizard : 157 -> 75
+charizard : 163 -> 70
+charizard : 164 -> {}
+charizard : 173 -> 50
+charizard : 174 -> {}
+charizard : 182 -> {}
+charizard : 184 -> {}
+charizard : 189 -> 20
+charizard : 200 -> 120
+charizard : 201 -> {}
+charizard : 203 -> {}
+charizard : 206 -> 40
+charizard : 207 -> {}
+charizard : 210 -> 40
+charizard : 211 -> 70
+charizard : 213 -> {}
+charizard : 214 -> {}
+charizard : 216 -> {}
+charizard : 218 -> {}
+charizard : 223 -> 100
+charizard : 225 -> 60
+charizard : 231 -> 100
+charizard : 232 -> 50
+charizard : 237 -> 60
+charizard : 239 -> 40
+charizard : 241 -> {}
+charizard : 242 -> 80
+charizard : 249 -> 40
+charizard : 251 -> {}
+charizard : 257 -> 95
+charizard : 261 -> {}
+charizard : 263 -> 70
+charizard : 264 -> 150
+charizard : 270 -> {}
+charizard : 280 -> 75
+charizard : 290 -> 70
+charizard : 299 -> 85
+charizard : 307 -> 150
+charizard : 311 -> 50
+charizard : 314 -> 60
+charizard : 315 -> 130
+charizard : 317 -> 60
+charizard : 332 -> 60
+charizard : 337 -> 80
+charizard : 349 -> {}
+charizard : 355 -> {}
+charizard : 363 -> {}
+charizard : 366 -> {}
+charizard : 374 -> {}
+charizard : 394 -> 120
+charizard : 403 -> 75
+charizard : 406 -> 85
+charizard : 411 -> 120
+charizard : 416 -> 150
+charizard : 421 -> 70
+charizard : 424 -> 65
+charizard : 432 -> {}
+charizard : 445 -> {}
+charizard : 466 -> 60
+charizard : 468 -> {}
+charizard : 481 -> 70
+charizard : 488 -> 50
+charizard : 496 -> 60
+charizard : 497 -> 40
+charizard : 507 -> 60
+charizard : 510 -> 60
+charizard : 512 -> 55
+charizard : 517 -> 100
+charizard : 519 -> 80
+charizard : 523 -> 60
+charizard : 525 -> 60
+charizard : 526 -> {}
+charizard : 535 -> {}
+charizard : 542 -> 110
+charizard : 590 -> {}
+charizard : 595 -> 75
+charizard : 612 -> 40
+charizard : 693 -> 60
+charizard : 784 -> 60
+charizard : 799 -> 25
+charizard : 814 -> 40
+charizard : 815 -> 70
+charizard : 851 -> 80
+pikachu  data.
+[PokemonType(slot=1, type=MinimalResource(id=13, name='electric'))]
+charizard  data.
+[PokemonType(slot=1, type=MinimalResource(id=10, name='fire')), PokemonType(slot=2, type=MinimalResource(id=3, name='flying'))]

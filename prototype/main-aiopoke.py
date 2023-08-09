@@ -22,43 +22,105 @@ import aiopoke
 #         print(pokemon.name)
 
 
-def loadMoves(pokemon, moves, moveMap):
+def loadMoves(pokemonMoves, moveMap):
+    """
+    Loads each move into a map, moveMap, in the format [id] = name
+
+    Parameters
+    ----------
+    pokemonMoves : 
+        An array of pokemon moves retrieved from aiopokeapi. Each index contains a long string of unparsed data.
+    moveMap :
+        A map to be populated with each move's id and name. Ex. [id] = name 
+    """
     count = 0
-    for i in moves: 
+    for i in pokemonMoves: 
         currentMove = str(i)
         moveIt = str(i).find(',')
-        findMoves(str(i), ',', 3, moveMap)
+        findMoves(str(i), moveMap)
+
     return moveMap
 
-def findMoves(s, toFind, n, moveMap):
-    itFind = s.find(toFind)
-    itName = s.find("name=") + 6
-    i = 0
+def findMoves(s, moveMap):
+    """
+    Finds all of the names and ids of a pokemon's moveset and adds them to the moveMap map.
 
-    for i in range(n):
-        itFind = s.find(toFind, itFind + 1)
-    moveName = s[itName:itFind - 2]
+    Parameters
+    ----------
+    s :
+        A string of unparsed move data.
+    moveMap :
+        A map to be populated with each move's id ane name. Ex. [id] = name 
+    """
+
+    itNameBegin = s.find("name='") + 6
+    itNameEnd = 0
+
+    for i in range(0, len(s)): # In range of the whole single line string chars
+        if s[itNameBegin + i] == ')': # Can also use find member function of a string
+            itNameEnd = itNameBegin + i - 1
+            break
+
+    moveName = s[itNameBegin:itNameEnd]
     moveMap[findId(s)] = moveName
-
     return moveMap
 
 def findId(s):
-    itFind = s.find(',')
-    itId = s.find("id=")
-    i = 0
+    """
+    Finds the id from a string of unparsed move data.
 
-    for i in range(1):
-        itFind = s.find(',', itFind + 1)
-    moveId = s[itId + 3:itFind]
+    Parameters
+    ----------
+    s :
+        A string of unparsed move data.
+    """
+
+    itIdBegin = s.find("id=") + 3
+    itIdEnd = s.find(",")
+
+    moveId = s[itIdBegin:itIdEnd]
     return moveId
 
+# Used to find the type of a pokemon
+def findType(pokemon):
+    pokemonType = ""
+    print(pokemon.name, " data.")
+    print(pokemon.types)
+
+    return pokemonType
+
+
 def dumpMoves(pokeName, moves):
+    """
+    Dumps move name's and id's of pokemon.
+
+    Parameters
+    ----------
+    pokeName :
+        Name of pokemon.
+    moves :
+        Mapset of ids and moves of pokeName.
+    """
+
     print(pokeName, "has", str(len(moves)), "moves.")
     print("ID:", "Name:")
     for key in moves:
         print(key, "->", moves[key])
 
+
 async def loadBaseDamage(pokemon, moves):
+    """
+    Dumps move ids and its base damage.
+
+    Parameters
+    ----------
+    pokemon : 
+        Pokemon object obtained from aiopokeapi.
+    moves :
+        Map that contains ids and moves of a pokemon.
+
+    """
+
     async with aiopoke.AiopokeClient() as client:
         print("Displaying the damage of each move: ")
         for move in moves.keys():
@@ -69,7 +131,7 @@ async def loadBaseDamage(pokemon, moves):
 # You can only access api through these two lines. Treat this as the main function.
 async def main():
     async with aiopoke.AiopokeClient() as client:
-        # Available moves each opponent has
+        # Available moves each opponent has | 
         opponentOneMoves = {}
         opponentTwoMoves = {}
         
@@ -77,21 +139,58 @@ async def main():
         baseOne = {}
         baseTwo = {}
         
+        pokemonOne = ""
+        pokemonTwo = ""
 
-        pokemonOne = input("Enter pokemon 1: ")
-        pokemonTwo  = input("Enter pokemon 2: ")
-        pokemonOne = pokemonOne.lower()
-        pokemonTwo = pokemonTwo.lower()
+        # Exception handling for a ValueError to client.get_pokemon(). To validate pokemon.
+        found = False
+        while found == False: # Validating Pokemon 1
+            try: # Enter pokemon name
+                pokemonOne = input("Enter pokemon 1: ")
+                pokemonOne = pokemonOne.lower()
 
-        opponentOne = await client.get_pokemon(pokemonOne)
-        loadMoves(opponentOne.name, opponentOne.moves, opponentOneMoves)
+                opponentOne = await client.get_pokemon(pokemonOne)
+            except ValueError: # Invalid pokemon
+                #other
+                print("Not a valid value.")
+                found = False
+            else: # Valid Pokemon
+                found = True
 
-        opponentTwo = await client.get_pokemon(pokemonTwo)
-        loadMoves(opponentTwo.name, opponentTwo.moves, opponentTwoMoves)
+        found = False
+        while found == False: # Validating Pokemon 2
+            try: # Enter pokemon name
+                pokemonTwo  = input("Enter pokemon 2: ")
+                pokemonTwo = pokemonTwo.lower()
 
-        # await loadBaseDamage(opponentOne, opponentOneMoves)
-        # await loadBaseDamage(opponentTwo, opponentTwoMoves)
+                opponentTwo = await client.get_pokemon(pokemonTwo)
+            except ValueError: # Invalid pokemon
+                #other
+                print("Not a valid value.")
+                found = False
+            else: # Valid Pokemon
+                found = True
 
+        loadMoves(opponentOne.moves, opponentOneMoves)        
+        loadMoves(opponentTwo.moves, opponentTwoMoves)
+
+        print("Pokemon 1: " + opponentOne.name)
+        print("Pokemon 1 moves: ")
+        dumpMoves(opponentOne.name, opponentOneMoves)
+        print()
+        
+        print("Pokemon 2: " + opponentTwo.name)
+        print("Pokemon 2 moves: ")
+        dumpMoves(opponentTwo.name, opponentTwoMoves)
+
+        await loadBaseDamage(opponentOne, opponentOneMoves)
+        await loadBaseDamage(opponentTwo, opponentTwoMoves)
+
+        # Get opponentOne and opponentTwo pokemon types.
+        findType(opponentOne)
+        findType(opponentTwo)
+
+        # Convert pokemon moves to the effective type against a pokemon
 
         # Note: Make a min and max heap for each pokemon with respect to their opposing pokemon
         ## The idea is to make a min and max of moves that are most effective for each pokemon
@@ -107,14 +206,7 @@ async def main():
         # Search moves on type chart in comparison against opposing pokemon.
             # sort move effectiveness in a max and min heap for each pokemon. (2 min and 2 max)
         
-        print("Pokemon 1: " + opponentOne.name)
-        print("Pokemon 1 moves: ")
-        dumpMoves(opponentOne.name, opponentOneMoves)
-        print()
         
-        print("Pokemon 2: " + opponentTwo.name)
-        print("Pokemon 2 moves: ")
-        dumpMoves(opponentTwo.name, opponentTwoMoves)
 
         
     
