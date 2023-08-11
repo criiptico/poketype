@@ -15,6 +15,7 @@
 		- [ ] Not very effective (50%) *Cuts base power by half*
 		- [ ] Normal (100%) *Normal base power*
 		- [ ] Super-effective (200%) *Doubles base power*
+- [ ] Review README.md and Notes.md. Might want to modify the roadmap on README.md.
 - [ ] Develop the front end and the back end (after the [[Prototype app]] is done)
 	- [ ] Use flask and python to make a webapp of the [[Prototype app]]
 
