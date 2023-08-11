@@ -1,4 +1,4 @@
-AttackType  DefendType  Multiplier
+AttackType  DefendType  Multiplier | File provided by: https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
 Normal      Normal      1
 Normal      Fire        1
 Normal      Water       1

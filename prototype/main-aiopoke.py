@@ -153,7 +153,7 @@ async def main():
             except ValueError: # Invalid pokemon
                 #other
                 print("Not a valid value.")
-                found = False
+                # found = False
             else: # Valid Pokemon
                 found = True
 
@@ -167,7 +167,7 @@ async def main():
             except ValueError: # Invalid pokemon
                 #other
                 print("Not a valid value.")
-                found = False
+                # found = False
             else: # Valid Pokemon
                 found = True
 
@@ -186,9 +186,16 @@ async def main():
         await loadBaseDamage(opponentOne, opponentOneMoves)
         await loadBaseDamage(opponentTwo, opponentTwoMoves)
 
+        # Load the type chart txt into an adjacency.... list, was it a list or a matrix? # TODO: Look back on notes if it was a list or matrix.
+
         # Get opponentOne and opponentTwo pokemon types.
         findType(opponentOne)
         findType(opponentTwo)
+
+        # For each pokemon, look at each move
+            # While looking at each move, make a max heap with respect to the moves that are most effective.
+        # State each pokemon's moves' effectiveness by name and numerically against the opposing pokemon, traverse the loaded max heap
+
 
         # Convert pokemon moves to the effective type against a pokemon
 
