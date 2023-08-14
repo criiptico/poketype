@@ -1,25 +1,28 @@
 # Test code provided by AioPokeApi at https://beastmatser.github.io/aiopoke/
-# Running this code to test how it works.
 
 import asyncio
 import aiopoke
 
-# Below is test code
-# async def main() -> None:
-#     print("Hello world!")
-#     async with aiopoke.AiopokeClient() as client:
-#         berry = await client.get_berry(1)
-#         print(berry)
 
-#         # An object can also have 'MinimalResources' as attributes
-#         # You can fetch those with .fetch(), for example:
-#         # item = await berry.item.fetch() # This is the line that is making the program crash on line 22. I don't know what's wrong with this, but it doesn't work.
-#         print(berry.item.name)
-#         growth = berry.growth_time
-#         print(growth)
+def findTypeChart(typeMultiplier):
+    print(typeMultiplier)
 
-#         pokemon = await client.get_pokemon('pikachu')
-#         print(pokemon.name)
+def loadTypeChart(typeChart): # Also send a map, referenced below as someMap.
+    file_path = "single_type_chart.txt"
+
+    print()
+    print("Loading type chart...")
+    print()
+    
+    with open(file_path) as file:
+        next(file)
+
+        for line in file:
+            # Create a vector
+            findTypeChart(line) # Return a vector with parsed types and multiplier / load a vector
+            # loadMatrix(someVector, someMap)
+            # Iterate through vector
+            # Store data from vector to a map | Needs its own function.
 
 
 def loadMoves(pokemonMoves, moveMap):
@@ -186,7 +189,11 @@ async def main():
         await loadBaseDamage(opponentOne, opponentOneMoves)
         await loadBaseDamage(opponentTwo, opponentTwoMoves)
 
-        # Load the type chart txt into an adjacency.... list, was it a list or a matrix? # TODO: Look back on notes if it was a list or matrix.
+        # Load the type chart txt into an adjacency.... list, was it a list or a matrix? # TODO: Look back on notes if it was a list or matrix. I thinK it was MATRIX
+        # Do this at the beginning of the program so it doesn't load it each time.
+        typeChart = {}
+
+        loadTypeChart(typeChart) # Send an adjacency matrix | Use the unique values value, then use a map that contains a map as a value for repeated values.
 
         # Get opponentOne and opponentTwo pokemon types.
         findType(opponentOne)
