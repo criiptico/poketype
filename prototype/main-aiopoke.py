@@ -3,13 +3,19 @@
 import asyncio
 import aiopoke
 
+def loadMatrix(parsedData, typeMatrix): # Need typeMatrix to be pass by reference
+    print(parsedData[0], parsedData[1], parsedData[2])
+    # Load data into matrix if the key value isn't found
+
 # populates and returns a vector with parsed "typeMultiplier" data. 
 # Unparsed data is in this form: attack_data defend_data multiplier_data
 def findTypeChart(typeMultiplier):
+    parsedData = ["dummy_1", "dummy_2", "dummy_3"]
     print(typeMultiplier)
+    return parsedData
  
 # Opens file and iterates through the single_type_chart txt file
-def loadTypeChart(typeChart): # Also send a map, referenced below as someMap.
+def loadTypeChart(typeChart, typeMatrix): # Also send a map, referenced below as someMap.
     file_path = "single_type_chart.txt"
 
     print()
@@ -20,9 +26,10 @@ def loadTypeChart(typeChart): # Also send a map, referenced below as someMap.
         next(file)
 
         for line in file:
-            # Create a vector
-            findTypeChart(line) # Return a vector with parsed types and multiplier / load a vector
-            # loadMatrix(someVector, someMap) # Loads vector data onto matrix
+            # Create a vector (python equivalent is a list)
+            parsedData = []
+            parsedData = findTypeChart(line) # Return a vector with parsed types and multiplier / load a vector
+            loadMatrix(parsedData, typeMatrix) # Loads vector data onto matrix
                 # Iterate through vector
                 # Store data from vector to a map | Needs its own function.
 

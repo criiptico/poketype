@@ -16,12 +16,12 @@ As of now, I'm planning on making a prototype and then following it up with a mo
     + [x] Review README.md and Notes.md. Might want to modify the roadmap on README.md.
     + Front-end
         - [ ] Use flask and python to make the webapp
-        - App Instructions | Self explanatory & you can use normal html.
+        - [ ] App Instructions | Self explanatory & you can use normal html.
         - Form handling
             + [ ] Managing dynamic data with and without flask and/or python. | Dynamic: ex. What is your name: _INPUT:_ someName \ _OUTPUTS:_ Hi someName!
                 - [ ] Receiving data
-                    + [ ]Figure out how to access it once it's received
-                    + [ ]Figure out how to use it
+                    + [ ] Figure out how to access it once it's received
+                    + [ ] Figure out how to use it
                 - [ ] Sending data
                     - [ ] Non-calculative and dynamic data
                     - [ ] Calculative and dynamic data
@@ -37,10 +37,10 @@ As of now, I'm planning on making a prototype and then following it up with a mo
             + [x] Accessing different type of pokemon
             + [x] Accessing the types of attacks a particular pokemon can do
             + [x] Accessing damage an attack can do interms of type
-        - [ ] Functions
+        - Functions
             + Load chart - I'm not sure if the chart is going to be hard-coded or if I develop- or locate a type-chart.txt-esque file, then parse it.
                 - [x] I'm considering making or locating a file, then parsing it to load it each time the app is opened.
-                - [ ] Parse data
+                - [ ] Parse data | Self explanatory
                 - [ ] Store data
                     + On the design side, I plan on making an adjacency matrix that will work where I'll hard-code (since there's no api for it, I need to do it myself.) OR I could also load it in with a txt file, parse it, then input it into the matrix. Though, the purpose of the matrix is for the pokemon move type effectiveness. See: https://pokemondb.net/type
             + Type Chart Function - One of the most important functions in the program which serves in determining the effectiveness of a move.
@@ -62,6 +62,8 @@ As of now, I'm planning on making a prototype and then following it up with a mo
                 - [ ] Not very effective (50%) *Cuts base power by half*
                 - [ ] Normal (100%) *Normal base power*
                 - [ ] Super-effective (200%) *Doubles base power*
+                - [ ] Figure out how data should be looked up and stored in
+                the matrix with all the effectiveness data.
         - [ ] Develop the front end after the Prototype app is done
 ## Note: 
 I've been planning on working with Flask to retrieve and send information from the front end, but for now the priority is to get the back end working, then merge it with the front end.
