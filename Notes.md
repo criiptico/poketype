@@ -5,7 +5,7 @@
 So I've noticed a couple of things on how to make an adjacency matrix. I was thinking of putting a map inside itself if it came to the same value, but I see that that wouldn't work since for example: Fire -> Grass and Grass -> Fire aren't the same thing. 
 So, there's two ways to go about it.
 1. 🔴 Make a list with numerical values that stand for different Pokémon types, then store a map that contains different Pokémon types with multipliers as values for a Pokémon with some attack defending of some def.
-2. 🟡Make a map inside a map. This is an improved version of the version above. Instead of having numerical values symbolize the different pokemon types, the names would. This would make things simpler when the program would need to interpret pokemon types.
+2. 🟡Make a map inside a map. This is an improved version of the version above. Instead of having numerical values symbolize the different pokemon types, the names would. This would make things simpler when the program would need to interpret pokemon types. Then the value of each key on this map is another map. The input for this nested map is the defending pokemon's type and the value of this map is the multiplier.
 	- There's one way I want to improve this approach and that's to generalize this. As it stands, I need to input the number of Pokémon types that there are. To change this, I could change the single_type_chart.txt's second line to include all the different types included in the file or I could add them onto the dictionary, with respect to attacking Pokémon attacks, as the program is reading them. The latter is probably a better approach since I'd need data for attacking move types and the type of the Pokémon that's defending. 
 	^ Go with this second approach. 👍
 
