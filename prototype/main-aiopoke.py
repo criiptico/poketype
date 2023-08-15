@@ -3,10 +3,12 @@
 import asyncio
 import aiopoke
 
-
+# populates and returns a vector with parsed "typeMultiplier" data. 
+# Unparsed data is in this form: attack_data defend_data multiplier_data
 def findTypeChart(typeMultiplier):
     print(typeMultiplier)
-
+ 
+# Opens file and iterates through the single_type_chart txt file
 def loadTypeChart(typeChart): # Also send a map, referenced below as someMap.
     file_path = "single_type_chart.txt"
 
@@ -20,9 +22,9 @@ def loadTypeChart(typeChart): # Also send a map, referenced below as someMap.
         for line in file:
             # Create a vector
             findTypeChart(line) # Return a vector with parsed types and multiplier / load a vector
-            # loadMatrix(someVector, someMap)
-            # Iterate through vector
-            # Store data from vector to a map | Needs its own function.
+            # loadMatrix(someVector, someMap) # Loads vector data onto matrix
+                # Iterate through vector
+                # Store data from vector to a map | Needs its own function.
 
 
 def loadMoves(pokemonMoves, moveMap):

@@ -1,24 +1,5 @@
 # Notes:
 
-- [ ] Finish the [[Prototype app]] program.
-	- [x] Pokémon & Move Name
-	- [x] Move Base Power
-	- [x] Develop a txt file to store single type effectiveness of Pokémon of a single type. 
-		- Note: This also works for dual type pokemon, refer to [[Notes#8-9-23]]
-	- [ ] Pokémon type effectiveness needs:
-		- [x] Attacking Move base power
-		- [ ] Attacking Move type
-		- [ ] Defending Pokémon type(s) {Single type and Dual type}
-	- [x] ❗**Find a method to implement the dual type Pokémon chart**❗**Found!** 😁
-	- [ ] Use Type Chart Function to Calculate Effectiveness of Move
-		- [ ] No effect (0%) *No damage*
-		- [ ] Not very effective (50%) *Cuts base power by half*
-		- [ ] Normal (100%) *Normal base power*
-		- [ ] Super-effective (200%) *Doubles base power*
-- [ ] Review README.md and Notes.md. Might want to modify the roadmap on README.md.
-- [ ] Develop the front end and the back end (after the [[Prototype app]] is done)
-	- [ ] Use flask and python to make a webapp of the [[Prototype app]]
-
 #### _07/06/2023_ 
 #### Pyscript and Flask:
 Well, I just found out about pyscript. I think I'm still going to use
