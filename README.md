@@ -40,8 +40,8 @@ As of now, I'm planning on making a prototype and then following it up with a mo
         - Functions
             + Load chart - I'm not sure if the chart is going to be hard-coded or if I develop- or locate a type-chart.txt-esque file, then parse it.
                 - [x] I'm considering making or locating a file, then parsing it to load it each time the app is opened.
-                - [ ] Parse data | Self explanatory
-                - [ ] Store data
+                - [x] Parse data | Self explanatory
+                - [x] Store data
                     + On the design side, I plan on making an adjacency matrix that will work where I'll hard-code (since there's no api for it, I need to do it myself.) OR I could also load it in with a txt file, parse it, then input it into the matrix. Though, the purpose of the matrix is for the pokemon move type effectiveness. See: https://pokemondb.net/type
             + Type Chart Function - One of the most important functions in the program which serves in determining the effectiveness of a move.
             + Type filter - Dumps all data processed with the type chart.

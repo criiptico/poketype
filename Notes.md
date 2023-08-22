@@ -1,7 +1,7 @@
 # Notes:
 
 
-#### 8-15-23
+#### _8-15-23_
 So I've noticed a couple of things on how to make an adjacency matrix. I was thinking of putting a map inside itself if it came to the same value, but I see that that wouldn't work since for example: Fire -> Grass and Grass -> Fire aren't the same thing. 
 So, there's two ways to go about it.
 1. 🔴 Make a list with numerical values that stand for different Pokémon types, then store a map that contains different Pokémon types with multipliers as values for a Pokémon with some attack defending of some def.
