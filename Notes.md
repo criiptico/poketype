@@ -1,5 +1,10 @@
 # Notes:
 
+#### _8-22-23_
+You know... maybe it **would** be better to make my own pokemon object. Considering the recent issue with transferring
+data like a pokemon's type. i.e name, moves, - wait, what if I make a move type too, that way everything is in one place.
+Hmmmm, definitely something to consider, that way if I **were** to make moves in my own pokemon class, then I can insert that move there and just access different things.... through it.... hmmm.
+Hmmm I'm definitely considering that.
 
 #### _8-15-23_
 So I've noticed a couple of things on how to make an adjacency matrix. I was thinking of putting a map inside itself if it came to the same value, but I see that that wouldn't work since for example: Fire -> Grass and Grass -> Fire aren't the same thing. 
