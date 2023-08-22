@@ -47,8 +47,10 @@ As of now, I'm planning on making a prototype and then following it up with a mo
             + Type filter - Dumps all data processed with the type chart.
             + **Additional Feature** Damage filter - If attack is normal, then search for the normal move with the most damage. Same with any other move effectiveness.
         - [ ] Finish the [[Prototype app]] program.
-            - [x] Pokémon & Move Name
-            - [x] Move Base Power
+            - [ ] Parse api data
+                + [x] Pokémon & Move Name
+                + [x] Move Base Power
+                + [ ] Move type
             - [x] Develop a txt file to store single type effectiveness of Pokémon of a single type. 
                 - **Found one online** Refer to: https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
                 - Note: This also works for dual type pokemon, refer to Notes#8-9-23
