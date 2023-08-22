@@ -40,15 +40,17 @@ As of now, I'm planning on making a prototype and then following it up with a mo
         - Functions
             + Load chart - I'm not sure if the chart is going to be hard-coded or if I develop- or locate a type-chart.txt-esque file, then parse it.
                 - [x] I'm considering making or locating a file, then parsing it to load it each time the app is opened.
-                - [ ] Parse data | Self explanatory
-                - [ ] Store data
+                - [x] Parse data | Self explanatory
+                - [x] Store data
                     + On the design side, I plan on making an adjacency matrix that will work where I'll hard-code (since there's no api for it, I need to do it myself.) OR I could also load it in with a txt file, parse it, then input it into the matrix. Though, the purpose of the matrix is for the pokemon move type effectiveness. See: https://pokemondb.net/type
             + Type Chart Function - One of the most important functions in the program which serves in determining the effectiveness of a move.
             + Type filter - Dumps all data processed with the type chart.
             + **Additional Feature** Damage filter - If attack is normal, then search for the normal move with the most damage. Same with any other move effectiveness.
         - [ ] Finish the [[Prototype app]] program.
-            - [x] Pokémon & Move Name
-            - [x] Move Base Power
+            - [ ] Parse api data
+                + [x] Pokémon & Move Name
+                + [x] Move Base Power
+                + [ ] Move type
             - [x] Develop a txt file to store single type effectiveness of Pokémon of a single type. 
                 - **Found one online** Refer to: https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
                 - Note: This also works for dual type pokemon, refer to Notes#8-9-23
