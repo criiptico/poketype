@@ -1,21 +1,37 @@
-# Test code provided by AioPokeApi at https://beastmatser.github.io/aiopoke/
-
 import asyncio
 import aiopoke
 
 def loadMatrix(parsedData, typeMatrix): # Need typeMatrix to be pass by reference
-    print(parsedData[0], parsedData[1], parsedData[2])
-    # Load data into matrix if the key value isn't found
+    # print("Data:", parsedData)
+    # print(str(parsedData[0]), str(parsedData[1]), str(parsedData[2])) #issue with last float value of fairy fairy 0.5 from single_type_chart.txt file.
+
+    # if the attacking value isn't found in the outer map
+    if (str(parsedData[0]) in typeMatrix) == False: # Look up how to access the first value 
+        # add a new value to outer matrix
+        newMap = {}
+        typeMatrix[str(parsedData[0])] = newMap
+    # else access the value of the attacking value and add the defending type as the key and its multiplier as its value
+    # Continue until there's no more parsedData given to us.
+    typeMatrix[str(parsedData[0])][str(parsedData[1])] = float(parsedData[2])
 
 # populates and returns a vector with parsed "typeMultiplier" data. 
 # Unparsed data is in this form: attack_data defend_data multiplier_data
 def findTypeChart(typeMultiplier):
-    parsedData = ["dummy_1", "dummy_2", "dummy_3"]
-    print(typeMultiplier)
+    typeData = ""
+    parsedData = []
+    for character in typeMultiplier:           
+        if character == typeMultiplier[len(typeMultiplier) - 2] or character == ' ':
+            if character == typeMultiplier[len(typeMultiplier) - 2]:
+                typeData = "".join([typeData, character])
+            parsedData.append(typeData)
+            typeData = ""
+            continue
+        typeData = "".join([typeData, character])
+            
     return parsedData
  
 # Opens file and iterates through the single_type_chart txt file
-def loadTypeChart(typeChart, typeMatrix): # Also send a map, referenced below as someMap.
+def loadTypeChart(typeChart): # Also send a map, referenced below as someMap.
     file_path = "single_type_chart.txt"
 
     print()
@@ -29,10 +45,13 @@ def loadTypeChart(typeChart, typeMatrix): # Also send a map, referenced below as
             # Create a vector (python equivalent is a list)
             parsedData = []
             parsedData = findTypeChart(line) # Return a vector with parsed types and multiplier / load a vector
-            loadMatrix(parsedData, typeMatrix) # Loads vector data onto matrix
+            # print("Line of data:", line)
+            # for data in parsedData:
+            #     print(data)
+            loadMatrix(parsedData, typeChart) # Loads vector data onto matrix
                 # Iterate through vector
                 # Store data from vector to a map | Needs its own function.
-
+        # print(typeChart)
 
 def loadMoves(pokemonMoves, moveMap):
     """
@@ -47,11 +66,9 @@ def loadMoves(pokemonMoves, moveMap):
     """
     count = 0
     for i in pokemonMoves: 
-        currentMove = str(i)
-        moveIt = str(i).find(',')
-        findMoves(str(i), moveMap)
+        findMoves(str(i), moveMap) # The intention is for this to be changed here.
 
-    return moveMap
+    # return moveMap # What is it returning?
 
 def findMoves(s, moveMap):
     """
@@ -75,7 +92,7 @@ def findMoves(s, moveMap):
 
     moveName = s[itNameBegin:itNameEnd]
     moveMap[findId(s)] = moveName
-    return moveMap
+    # return moveMap
 
 def findId(s):
     """
@@ -95,11 +112,29 @@ def findId(s):
 
 # Used to find the type of a pokemon
 def findType(pokemon):
-    pokemonType = ""
-    print(pokemon.name, " data.")
-    print(pokemon.types)
+    pokemonTypes = set()
+    type = ""
+    # print(pokemon.name, "data.")
+    # print(pokemon.types) # Parse to get data types.
+    data = str(pokemon.types)
+    typeNameIt = data.find("name='")
 
-    return pokemonType
+    print("Parsing", pokemon.name, "data...")
+    while typeNameIt != -1:
+
+        # for character in data:
+        for i in range(typeNameIt + 6, len(data)):
+            if data[i] == "'":
+                break
+            type = "".join([type, data[i]])
+        pokemonTypes.add(type)
+        type = ""
+        data = data.replace("name='", "", 1)
+        typeNameIt = data.find("name='")
+
+    print(pokemonTypes)
+
+    return pokemonTypes # pokemonType is a list... or a set? A set.
 
 
 def dumpMoves(pokeName, moves):
@@ -120,7 +155,7 @@ def dumpMoves(pokeName, moves):
         print(key, "->", moves[key])
 
 
-async def loadBaseDamage(pokemon, moves):
+async def loadBaseDamage(pokemon, moves, baseMoveDamage):
     """
     Dumps move ids and its base damage.
 
@@ -134,20 +169,21 @@ async def loadBaseDamage(pokemon, moves):
     """
 
     async with aiopoke.AiopokeClient() as client:
-        print("Displaying the damage of each move: ")
+        # print("Displaying the damage of each move: ")
         for move in moves.keys():
             moveData = await client.get_move(move)
-            print(pokemon.name, ":", move, "->", moveData.power)
+            baseMoveDamage[move] = moveData.power
+            print(pokemon.name, ":", move, "->", baseMoveDamage[move], "-", moveData.type)
             
 
 # You can only access api through these two lines. Treat this as the main function.
 async def main():
     async with aiopoke.AiopokeClient() as client:
-        # Available moves each opponent has | 
+        # Available moves each opponent has | in the form [id] = name
         opponentOneMoves = {}
         opponentTwoMoves = {}
         
-        # Store the base damage of each move for both opponents
+        # Store the base damage of each move for both opponents | form the [id] = power | Note: convert the value into a list... need the power type. OR make another map.
         baseOne = {}
         baseTwo = {}
         
@@ -188,21 +224,21 @@ async def main():
 
         print("Pokemon 1: " + opponentOne.name)
         print("Pokemon 1 moves: ")
-        dumpMoves(opponentOne.name, opponentOneMoves)
+        # dumpMoves(opponentOne.name, opponentOneMoves)
+        await loadBaseDamage(opponentOne, opponentOneMoves, baseOne) # Need to get the move type from here as well. Same thing in line 234
         print()
         
         print("Pokemon 2: " + opponentTwo.name)
         print("Pokemon 2 moves: ")
-        dumpMoves(opponentTwo.name, opponentTwoMoves)
-
-        await loadBaseDamage(opponentOne, opponentOneMoves)
-        await loadBaseDamage(opponentTwo, opponentTwoMoves)
+        # dumpMoves(opponentTwo.name, opponentTwoMoves)
+        await loadBaseDamage(opponentTwo, opponentTwoMoves, baseTwo)
 
         # Load the type chart txt into an adjacency.... list, was it a list or a matrix? # TODO: Look back on notes if it was a list or matrix. I thinK it was MATRIX
         # Do this at the beginning of the program so it doesn't load it each time.
         typeChart = {}
 
         loadTypeChart(typeChart) # Send an adjacency matrix | Use the unique values value, then use a map that contains a map as a value for repeated values.
+
 
         # Get opponentOne and opponentTwo pokemon types.
         findType(opponentOne)
