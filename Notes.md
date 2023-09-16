@@ -1,5 +1,26 @@
 # Notes:
 
+#### _8-15-23_
+I just added a Pokemon and a Move class which will be imported to the renamed main file, pokeType.py. 
+Next is to- well, either to iden- yup. Next is to identify the places where I can easily utilize these classes.
+Development of the program will continue once the new system is in place.
+
+On another note, I think I found another way to implement the matrix, but the issue is that I'd need to make a 
+class- or I'd need to make it in-scope for the new Pokemon class and the Move class. So what I'm thinking is
+that instead of using a separate function to determine the level of efficacy a move has on a pokemon, that function 
+can be implemented in the Pokemon class... but it w-. I'll think of implementing it once I'm done with the whole program.
+I realize two things, I can't make every change I want (I'm implementing the Pokemon and Move class since they're 
+genuinely useful), not all changes are good and this is one of those. 
+To do it:
+Pros: It'll encapsulate code. 
+Cons: ... 
+
+To not do it:
+Pros: ...
+Cons: Gather all information of each pokemon, then use one function to get the return data.
+
+But... it also makes sense to have it as a separate function for all pokemon... I'll just do that then.
+
 #### _8-22-23_
 You know... maybe it **would** be better to make my own pokemon object. Considering the recent issue with transferring
 data like a pokemon's type. i.e name, moves, - wait, what if I make a move type too, that way everything is in one place.

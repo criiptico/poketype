@@ -1,5 +1,10 @@
+# Imported Libraries
 import asyncio
 import aiopoke
+
+# Imported Classes
+import Move
+import Pokemon
 
 def loadMatrix(parsedData, typeMatrix): # Need typeMatrix to be pass by reference
     # print("Data:", parsedData)
@@ -170,11 +175,14 @@ async def loadBaseDamage(pokemon, moves, baseMoveDamage):
 
     async with aiopoke.AiopokeClient() as client:
         # print("Displaying the damage of each move: ")
-        for move in moves.keys():
-            moveData = await client.get_move(move)
-            baseMoveDamage[move] = moveData.power
-            print(pokemon.name, ":", move, "->", baseMoveDamage[move], "-", moveData.type)
-            
+        for moveId in moves.keys():
+            moveData = await client.get_move(moveId)
+            baseMoveDamage[moveId] = moveData.power
+            print(pokemon.name, ":", moveId, "->", baseMoveDamage[moveId], "-", moveData.type)
+                                    #  ID               Damage                      Type
+                                    # If you make a move class, it should have this: ID, Damage, Type, Name
+                                    # If you make a pokemon class, it should have this: Name, Type(s), Moves
+                                        # Should the max heap be in the pokemon object or be a completely separate thing?
 
 # You can only access api through these two lines. Treat this as the main function.
 async def main():
