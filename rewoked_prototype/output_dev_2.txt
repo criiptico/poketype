@@ -1,0 +1,3 @@
+Enter pokemon 1: Enter pokemon 2: Pokemon 1: pikachu 	Pokemon 2: charizard
+Pokemon 1 data: [PokemonType(slot=1, type=MinimalResource(id=13, name='electric'))]
+Pokemon 2 data: [PokemonType(slot=1, type=MinimalResource(id=10, name='fire')), PokemonType(slot=2, type=MinimalResource(id=3, name='flying'))]

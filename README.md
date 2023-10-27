@@ -28,7 +28,9 @@ As of now, I'm planning on making a prototype and then following it up with a mo
                     - [ ] Figure out how to send it back
                     - [ ] Figure out how to output data onto client
         - [ ] Design | A decent design would be awesome ;-;
-    + Back-end 
+    + Back-end
+        - [ ] Implementing Move and Pokemon class into all functions.
+            
         - [x] API related
             + [x] Verify you can input pokemon
             + [x] Verify you can retrieve the moves that are effective with that pokemon. This is sorted with respect to the type of move (which is its effectiveness) and how much damage the move actually does.
