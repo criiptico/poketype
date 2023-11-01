@@ -39,16 +39,13 @@ async def main():
         print("Pokemon 1:", pokemon_1_data.name, "\tPokemon 2:", pokemon_2_data.name)
         
         load_poke_data = Load_Pokemon_Data()
-        load_poke_data.load_pokemon(pokemon_1, pokemon_1_data)
-        load_poke_data.load_pokemon(pokemon_2, pokemon_2_data)
+        await load_poke_data.load_pokemon(pokemon_1, pokemon_1_data)
+        await load_poke_data.load_pokemon(pokemon_2, pokemon_2_data)
 
-        pokemon_battle = Battle(pokemon_1, pokemon_2) # Executes after loading pokemon data is complete
+        # pokemon_battle = Battle(pokemon_1, pokemon_2) # Executes after loading pokemon data is complete
 
         print("Pokemon 1 data:", pokemon_1_data.types)
         print("Pokemon 2 data:", pokemon_2_data.types)
-
-
-
 
 
 

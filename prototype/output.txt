@@ -1,1 +1,11 @@
-Enter pokemon 1: 
+Enter pokemon 1: Enter pokemon 2: Pokemon 1: pikachu
+Pokemon 1 moves: 
+pikachu : 5 -> 80 - MinimalResource(id=1, name='normal')
+pikachu : 6 -> 40 - MinimalResource(id=1, name='normal')
+pikachu : 9 -> 75 - MinimalResource(id=13, name='electric')
+pikachu : 21 -> 80 - MinimalResource(id=1, name='normal')
+pikachu : 24 -> 30 - MinimalResource(id=2, name='fighting')
+pikachu : 25 -> 120 - MinimalResource(id=1, name='normal')
+pikachu : 29 -> 70 - MinimalResource(id=1, name='normal')
+pikachu : 34 -> 85 - MinimalResource(id=1, name='normal')
+pikachu : 36 -> 90 - MinimalResource(id=1, name='normal')
