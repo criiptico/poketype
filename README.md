@@ -9,6 +9,8 @@ The web version has been halted until the backend/prototype has been fully devel
 Repo Location: https://github.com/beastmatser/aiopokeapi
 Documentation: https://beastmatser.github.io/aiopoke/docs/
 
+## Note:
+Front end development will continue when the back end (prototype) is functioning.
 
 ## TODO:
 As of now, I'm planning on making a prototype and then following it up with a more in depth implementation in the web version.
