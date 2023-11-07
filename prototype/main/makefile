@@ -1,16 +1,19 @@
-run:
-	python3 pokeType.py
+INPUT_SRC := ../resources/input.txt
+OUTPUT := ../resources/output
 
-input:
-	python3 pokeType.py < input.txt
+run:
+	python3 pokeType_main.py
+
+input: $(INPUT_SRC)
+	python3 pokeType_main.py < $(INPUT_SRC)
 
 output:
-	python3 pokeType.py > output.txt
+	python3 pokeType_main.py > $(OUTPUT)
 
 io:
-	python3 pokeType.py < input.txt > output.txt
+	python3 pokeType_main.py < $(INPUT_SRC) > $(OUTPUT)
 
 venv: # Just use this to get the pathing, then do more research on this later.
 	# source ~/projects/virtualEnvironments/pokeTypeVenv/bin/activate
-	source /home/adrian/projects/virtualEnvironments/pokeTypeVenv/bin/activate
+	echo source /home/adrian/projects/virtualEnvironments/pokeTypeVenv/bin/activate
 	

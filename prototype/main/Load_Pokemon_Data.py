@@ -18,7 +18,7 @@ class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon &
             print(moves_id)
             # Use client to load the pokemon with its corresponding move_name, move_id, and move_power | Load it in the Pokemon type data member: moves = {}
             for move in moves_id:
-                move_data = await client.get_move(int(move)) # API Wrapper Error on line 23
+                move_data = await client.get_move(int(move)) # Error on line 21
                 new_move =  Move() # Imported Move class
                 new_move.id = move
                 new_move.name = move_data.name
