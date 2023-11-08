@@ -16,7 +16,7 @@ Roadmap (as of now):
 	- If it's a success, find a way to bind the my code from another directory to where the html files are.
 		+ Then, develop the front end (Follow the mockup in the Front-end folder)
 	- If it's not a success, use Apache HTTP to launch a server, test, then develop and repeat.
-3. Finish front end development to list out the moves, move type, and effectiveness against their respective opponent. (Also, make it colorful 🌈)
+3. Finish front end design to list out the moves, move type, and effectiveness against their respective opponent. (Also, make it colorful 🌈)
 
 #### _8-15-23_
 I just added a Pokemon and a Move class which will be imported to the renamed main file, pokeType.py. 
