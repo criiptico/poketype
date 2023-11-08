@@ -1,5 +1,23 @@
 # Notes:
 
+#### _11-8-23_
+I reworked the data structures used for each state in the program, Pokemon, Move, Battle, and Load_PokemonData python files
+were created to promote encapsulation and modularity. The last thing I need to transfer over from the previous version is
+loading in the type chart in the Battle class, then further develop the Battle class to evaluate a pokemon. Then some
+smaller steps is to implement [PyScript](https://pyscript.net/) or [Brython](https://brython.info/) so I can use this code in the html file. This would make it possible to launch this website on github pages (Since you can only launch static pages on GitHub). 
+But if that fails, then I'll have to figure out how to setup an Apache HTTP server.
+
+In summary,
+Roadmap (as of now):
+1. Develop Battle Class:
+	+ Load in the type chart
+	+ Develop damage calculations
+2. Launch some type of code in python using [PyScript](https://pyscript.net/) or [Brython](https://brython.info/) in GitHub's Pages Website feature.
+	- If it's a success, find a way to bind the my code from another directory to where the html files are.
+		+ Then, develop the front end (Follow the mockup in the Front-end folder)
+	- If it's not a success, use Apache HTTP to launch a server, test, then develop and repeat.
+3. Finish front end development to list out the moves, move type, and effectiveness against their respective opponent. (Also, make it colorful 🌈)
+
 #### _8-15-23_
 I just added a Pokemon and a Move class which will be imported to the renamed main file, pokeType.py. 
 Next is to- well, either to iden- yup. Next is to identify the places where I can easily utilize these classes.
