@@ -9,7 +9,7 @@ But if that fails, then I'll have to figure out how to setup an Apache HTTP serv
 
 In summary,
 Roadmap (as of now):
-1. Develop Battle Class:
+1. Develop **Battle** Class:
 	+ Load in the type chart
 	+ Develop damage calculations
 2. Launch some type of code in python using [PyScript](https://pyscript.net/) or [Brython](https://brython.info/) in GitHub's Pages Website feature.
