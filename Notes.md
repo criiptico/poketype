@@ -1,5 +1,14 @@
 # Notes:
 
+#### _11-16-23_
+I just found this website called firebase. I've decided to try using flask with firebase so I can launch the server- but of course it'd be great to test it out on GitHub first.
+Here are some resources I found on how to use flask:
+https://www.techwithtim.net/tutorials/flask/a-basic-website
+https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/
+https://flask.palletsprojects.com/en/2.3.x/quickstart/
+Also to note, look up HTTP methods.
+
+
 #### _11-8-23_
 I reworked the data structures used for each state in the program, Pokemon, Move, Battle, and Load_PokemonData python files
 were created to promote encapsulation and modularity. The last thing I need to transfer over from the previous version is
