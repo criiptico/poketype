@@ -1,5 +1,7 @@
-from Pokemon import Pokemon
+import asyncio
 import aiopoke
+import logging
+from Pokemon import Pokemon
 from Move import Move
 
 class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon & moves), and ids (pokemon & moves)
@@ -15,20 +17,27 @@ class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon &
     async def __load_moves(self, pokemon: Pokemon, pokemon_data):
         async with aiopoke.AiopokeClient() as client:
             moves_id = self.__get_move_ids(pokemon_data) # get the move ids first (returns a list)
+            
+            print(pokemon.name)
             print(moves_id)
             # Use client to load the pokemon with its corresponding move_name, move_id, and move_power | Load it in the Pokemon type data member: moves = {}
             for move in moves_id:
-                move_data = await client.get_move(int(move)) # Error on line 21
+                print("Current move id:", move)
+                try:
+                    move_data = await client.get_move(int(move)) # Error on line 37
+                except TypeError:
+                    print("\tAn Error Occured with " + move)
+                    # log = logging.getLogger()
+                    # log.exception("An Error Occured with " + move)
                 new_move =  Move() # Imported Move class
                 new_move.id = move
                 new_move.name = move_data.name
                 new_move.power = move_data.power
                 new_move.type = move_data.type
-                
-                pokemon.moves[move_data.name] = new_move
 
-                print(move_data.name)
-                
+                pokemon.moves[move_data.name] = new_move
+                # print(move_data.name)
+
     def __api_delim(self, to_search: str, to_find, up_to):
         to_return = []
         # to_search = str(to_search)

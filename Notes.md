@@ -1,5 +1,12 @@
 # Notes:
 
+#### _12-18-23_
+I ran into a massive issue. I can't for the life of me get through this error: https://github.com/beastmatser/aiopokeapi/issues/79 
+I also posted it on stack overflow: https://stackoverflow.com/questions/76517244/typeerror-argument-after-must-be-a-mapping-not-a-nonetype-error-fro. 
+This is what chat gpt says to do: https://chat.openai.com/share/cd2cabd6-cb6f-4a2d-9e7e-8a7557d47496. 
+So, I'll clean my virtual environment and if it doesn't work, then....... 
+I really don't want to recode this codebase a third time and this time with a completely new api-wrapper to learn.
+
 #### _11-16-23_
 I just found this website called firebase. I've decided to try using flask with firebase so I can launch the server- but of course it'd be great to test it out on GitHub first.
 Here are some resources I found on how to use flask:

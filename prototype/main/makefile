@@ -1,5 +1,5 @@
 INPUT_SRC := ../resources/input.txt
-OUTPUT := ../resources/output
+OUTPUT := ../output/output.txt
 
 run:
 	python3 pokeType_main.py

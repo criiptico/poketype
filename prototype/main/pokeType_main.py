@@ -1,4 +1,5 @@
 # Imported Libraries
+
 import asyncio
 import aiopoke
 
@@ -10,6 +11,8 @@ from Load_Pokemon_Data import Load_Pokemon_Data
 
 async def main():
     async with aiopoke.AiopokeClient() as client:
+        # some_data =  await client.get_move(192)
+        # print(some_data.name)
         pokemon_1 = Pokemon()
         pokemon_2 = Pokemon()
 
@@ -18,6 +21,7 @@ async def main():
             try:
                 pokemon = input("Enter pokemon 1: ")
                 pokemon = pokemon.lower()
+                pokemon_1.name = pokemon
                 pokemon_1_data = await client.get_pokemon(pokemon)
             except ValueError:
                 print("Not a valid value.")
@@ -29,6 +33,7 @@ async def main():
             try:
                 pokemon = input("Enter pokemon 2: ")
                 pokemon = pokemon.lower()
+                pokemon_2.name = pokemon
                 pokemon_2_data = await client.get_pokemon(pokemon)
             except ValueError:
                 print("Not a valid value.")
