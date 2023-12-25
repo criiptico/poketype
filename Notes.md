@@ -13,6 +13,18 @@ It'd be a cool project to make the complete wrapper, but I just want to get this
 	+ Give the wrapper a name
 	+ Merge the working prototype with the new makeshift wrapper
 
+#### _12-19-23_
+I've tried deleting the old virtual environment and installing a new one, but it didn't work. Since I've had this issue for a long time, I'm going to have to use another api-wrapper.
+I'll be trying https://github.com/PokeAPI/pokebase and https://github.com/PokeAPI/pokepy and any other one on the pokeapi website.
+I'm hopeful I can get the code on poketype updated to work with a new api-wrapper. I also anticipate that the only difference is the delimeter. I'll have to 
+see how they both work and if either of them can work around the issue that I have with aiopokeapi.
+
+#### _12-19-23_
+I've tried deleting the old virtual environment and installing a new one, but it didn't work. Since I've had this issue for a long time, I'm going to have to use another api-wrapper.
+I'll be trying https://github.com/PokeAPI/pokebase and https://github.com/PokeAPI/pokepy and any other one on the pokeapi website.
+I'm hopeful I can get the code on poketype updated to work with a new api-wrapper. I also anticipate that the only difference is the delimeter. I'll have to 
+see how they both work and if either of them can work around the issue that I have with aiopokeapi.
+
 #### _12-18-23_
 I ran into a massive issue. I can't for the life of me get through this error: https://github.com/beastmatser/aiopokeapi/issues/79 
 I also posted it on stack overflow: https://stackoverflow.com/questions/76517244/typeerror-argument-after-must-be-a-mapping-not-a-nonetype-error-fro. 
