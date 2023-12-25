@@ -24,7 +24,8 @@ class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon &
             for move in moves_id:
                 print("Current move id:", move)
                 try:
-                    move_data = await client.get_move(int(move)) # Error on line 37
+                    # breakpoint()
+                    move_data = await client.get_move(int(move)) # Error on line 27
                 except TypeError:
                     print("\tAn Error Occured with " + move)
                     # log = logging.getLogger()

@@ -13,7 +13,7 @@ output:
 io:
 	python3 pokeType_main.py < $(INPUT_SRC) > $(OUTPUT)
 
-venv: # Just use this to get the pathing, then do more research on this later.
-	# source ~/projects/virtualEnvironments/pokeTypeVenv/bin/activate
-	echo source /home/adrian/projects/virtualEnvironments/pokeTypeVenv/bin/activate
+# venv: # Just use this to get the pathing, then do more research on this later.
+# 	# source ~/projects/virtualEnvironments/pokeTypeVenv/bin/activate
+# 	echo source /home/adrian/projects/virtualEnvironments/pokeTypeVenv/bin/activate
 	

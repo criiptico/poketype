@@ -1,5 +1,18 @@
 # Notes:
 
+#### _12-25-23_
+After looking over the options I had for pokemon api wrappers, I decided to make my own makeshift wrapper.
+I'm using libraries like pydantic and requests to receive pokemon data and sort it out onto objects- or as 
+pydantic refers to them "models". Here is a [pydantic tutorial](https://www.youtube.com/playlist?list=PL_mbkpXEiCiwgTlwfocagFS2HEdxxQXfP) and [pydantic's documentation](https://docs.pydantic.dev/latest/). I'm still on and off about how it works, but it's working lol. I've 
+finally got the Pokemon model working, now I want to get the Move model working. After that, I want to make
+it work similarly to how aiopokeapi works where you make a request through the wrapper with a pokemon's name or id.
+It'd be a cool project to make the complete wrapper, but I just want to get this project off the ground. **My one concern, the wrapper is too slow.**
+- ### tl;dr
+	+ Work on getting the Move pydantic model into a working condition.
+	+ Modularize the makeshift wrapper
+	+ Give the wrapper a name
+	+ Merge the working prototype with the new makeshift wrapper
+
 #### _12-18-23_
 I ran into a massive issue. I can't for the life of me get through this error: https://github.com/beastmatser/aiopokeapi/issues/79 
 I also posted it on stack overflow: https://stackoverflow.com/questions/76517244/typeerror-argument-after-must-be-a-mapping-not-a-nonetype-error-fro. 
