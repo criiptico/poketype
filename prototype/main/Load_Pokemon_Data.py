@@ -1,61 +1,71 @@
-import asyncio
-import aiopoke
 import logging
+import CustomPokeApiWrapper as PokeWrapper
+
+from CustomPokeApiWrapper import PokemonApi
 from Pokemon import Pokemon
 from Move import Move
 
 class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon & moves), and ids (pokemon & moves)
-    # move_ids = []
-    def __get_move_ids(self, pokemon_data): # returns all the move ids, the moves, that a pokemon can do 
-        move_string = str(pokemon_data.moves)
-        return self.__api_delim(move_string, "move=MinimalResource(id=", ',')
 
-    def __load_pokemon_types(self, pokemon, pokemon_data): # returns all the pokemon types that a pokemon is
-        type_string = str(pokemon_data.types)
-        pokemon.types = self.__api_delim(type_string, "name='", "'")
+    def __load_pokemon_type_names(self, pokemon: Pokemon, pokemon_data: PokemonApi): # returns all the pokemon types that a pokemon is
+        """Summary of __load_pokemon_type_names():
+                Loads all type names of a pokemon from pokemon_data to pokemon.
+            Args:
+                pokemon: To load all type names into it.
+                pokemon_data: To load all type names from it.
+        """
+        pokemon.types = pokemon_data.get_type_names()
 
-    async def __load_moves(self, pokemon: Pokemon, pokemon_data):
-        async with aiopoke.AiopokeClient() as client:
-            moves_id = self.__get_move_ids(pokemon_data) # get the move ids first (returns a list)
+    def __load_pokemon_moves(self, pokemon: Pokemon, pokemon_data: PokemonApi):
+        """Summary of __load_pokemon_moves():
+                Loads all move data from pokemon_data onto pokemon.
+            Args:
+                pokemon: To load all move data into it.
+                pokemon_data: To load all move data from it.
+        """
+        move_ids = pokemon_data.get_move_ids()
+
+        for move in move_ids:
+            try:
+                move_data = PokeWrapper.get_move(int(move))
+                new_move =  Move() # Imported Move class to keep the PokeWrapper and the main application separated
+                new_move.id = move_data.get_id()
+                new_move.name = move_data.get_name()
+                new_move.power = move_data.get_power()
+                new_move.type = move_data.get_type()
+
+            except TypeError:
+                print("\tAn Error Occured with " + move)
+                log = logging.getLogger()
+                log.exception("An Error Occured with " + move)
+
+            pokemon.moves[move_data.name] = new_move
+
+    # def __api_delim(self, to_search: str, to_find, up_to):
+    #     to_return = []
+    #     # to_search = str(to_search)
+    #     it = to_search.find(to_find)
+
+    #     while it != -1:
+    #         to_build = ""
+    #         for i in range(it + len(to_find), len(to_search)):
+    #             if to_search[i] == up_to:
+    #                 break
+    #             to_build = "".join([to_build, to_search[i]])
+    #         to_return.append(to_build)
+    #         to_search = to_search.replace(to_find, "", 1)
+
+    #         it = to_search.find(to_find)
+    #     return to_return
+
+    def load_pokemon(self, pokemon: Pokemon, pokemon_data: PokemonApi): # loads basic pokemon data and its moves
+        """Summary of load_pokemon()
+                Loads pokemon data from pokemon_data and PokeWrapper onto pokemon.
             
-            print(pokemon.name)
-            print(moves_id)
-            # Use client to load the pokemon with its corresponding move_name, move_id, and move_power | Load it in the Pokemon type data member: moves = {}
-            for move in moves_id:
-                print("Current move id:", move)
-                try:
-                    # breakpoint()
-                    move_data = await client.get_move(int(move)) # Error on line 27
-                except TypeError:
-                    print("\tAn Error Occured with " + move)
-                    # log = logging.getLogger()
-                    # log.exception("An Error Occured with " + move)
-                new_move =  Move() # Imported Move class
-                new_move.id = move
-                new_move.name = move_data.name
-                new_move.power = move_data.power
-                new_move.type = move_data.type
-
-                pokemon.moves[move_data.name] = new_move
-                # print(move_data.name)
-
-    def __api_delim(self, to_search: str, to_find, up_to):
-        to_return = []
-        # to_search = str(to_search)
-        it = to_search.find(to_find)
-
-        while it != -1:
-            to_build = ""
-            for i in range(it + len(to_find), len(to_search)):
-                if to_search[i] == up_to:
-                    break
-                to_build = "".join([to_build, to_search[i]])
-            to_return.append(to_build)
-            to_search = to_search.replace(to_find, "", 1)
-
-            it = to_search.find(to_find)
-        return to_return
-
-    async def load_pokemon(self, pokemon: Pokemon, pokemon_data): # loads basic pokemon data and its moves
-        self.__load_pokemon_types(pokemon, pokemon_data)
-        await self.__load_moves(pokemon, pokemon_data)
+            Args:
+                pokemon: Input a non-api Pokemon class.
+                pokemon_data: Input an api Pokemon class from PokeWrapper.
+        """
+        pokemon.name = pokemon_data.get_name()
+        self.__load_pokemon_type_names(pokemon, pokemon_data)
+        self.__load_pokemon_moves(pokemon, pokemon_data)

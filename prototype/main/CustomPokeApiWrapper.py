@@ -1,48 +1,91 @@
 import requests
+from typing import Optional
 from pydantic import BaseModel
 
 """Move Object Pydantic Models"""
 
 def get_move(name_or_id: str | int):
     """Summary of get_move(name_or_id: str | int)
-        Requests and returns a move from pokeapi and populates a Move object to return.    
+            Requests and returns a move from pokeapi to populate a Move object to return.    
     
         Args:
-            name_or_id: str | int: Input a name or id of a move.
+            name_or_id: Input a name or id of a move.
         Returns:
             A populated Move object that was populated from the name_or_id pokeapi request.
     """
-    url = "https://pokeapi.co/api/v2/move/{endpoint}".format(endpoint=name_or_id)
-    data = requests.get(url).json()
-    return Move(**data)
+    url = "https://pokeapi.co/api/v2/move/{endpoint}".format(endpoint = name_or_id)
+    fetched_data = requests.get(url)
 
-class MoveType(BaseModel):
+    if fetched_data.status_code == 200:
+        data = fetched_data.json()
+        return MoveApi(**data)
+    raise ValueError("Invalid Move Endpoint.", url, name_or_id)
+
+class _MoveType(BaseModel):
     name: str
     url: str
 
-class Move(BaseModel):
+class MoveApi(BaseModel):
     id: int
     name: str
-    power: int
-    type: MoveType
+    power: Optional[int] # Move can be a status effect.
+    type: _MoveType
+
+    def get_name(self):
+        """Summary of get_name()
+        
+            Returns:
+                The name of the loaded move.
+        """
+        return self.name
+
+    def get_id(self):
+        """Summary of get_id()
+        
+            Returns:
+                The id of the loaded move.
+        """
+        return self.id
+
+    def get_power(self):
+        """Summary of get_power()
+        
+            Returns:
+                The power of the loaded move.
+        """
+        return self.power
+
+    def get_type(self):
+        """Summary of get_type()
+        
+            Returns:
+                The name of the type of the loaded move.
+        """
+        return self.type.name
+    
 
 
 """Pokemon Object Pydantic Models"""
 
 def get_pokemon(name_or_id: str | int):
     """Summary of get_pokemon(name_or_id: str | int)
-        Requests and returns a pokemon from pokeapi and populates a Pokemon object to return.    
+            Requests and returns a pokemon from pokeapi to populate a Pokemon object to return.    
     
         Args:
-            name_or_id: str | int: Input a name or id of a pokemon.
+            name_or_id: Input a name or id of a pokemon.
         Returns:
             A populated Pokemon object that was populated from the name_or_id pokeapi request.
     """
     url = "https://pokeapi.co/api/v2/pokemon/{endpoint}".format(endpoint = name_or_id)
-    data = requests.get(url).json()
-    return Pokemon(**data)
+    fetched_data = requests.get(url)
+    
+    if fetched_data.status_code == 200:
+        data = fetched_data.json()
+        return PokemonApi(**data)
+    raise ValueError("Invalid Pokemon Endpoint.", url, name_or_id)
 
-class PokemonMove(BaseModel):
+
+class _PokemonMove(BaseModel):
     name: str
     url: str
 
@@ -69,10 +112,10 @@ class PokemonMove(BaseModel):
         """
         return self.url
 
-class PokemonMoveDetails(BaseModel):
-    move: PokemonMove
+class _PokemonMoveDetails(BaseModel):
+    move: _PokemonMove
 
-class PokemonType(BaseModel):
+class _PokemonType(BaseModel):
     name: str
     url: str
 
@@ -100,26 +143,34 @@ class PokemonType(BaseModel):
         """
         return self.url.rstrip("/").split("/")[-1]
 
-class PokemonTypeDetails(BaseModel):
-    type: PokemonType
+class _PokemonTypeDetails(BaseModel):
+    type: _PokemonType
 
-class Pokemon(BaseModel):
+class PokemonApi(BaseModel):
     id: int
     name: str
     height: int
     weight: int
-    moves: list[PokemonMoveDetails]
-    types: list[PokemonTypeDetails]
+    moves: list[_PokemonMoveDetails]
+    types: list[_PokemonTypeDetails]
 
-    """Move functions for the loaded pokemon."""
+    def get_name(self):
+        """Summary of get_name():
+
+        Returns: 
+            str: The name of the loaded pokemon.
+        """
+        return self.name
 
     def get_id(self):
         """Summary of get_id():
 
         Returns: 
-            int: The id of the pokemon.
+            int: The id of the loaded pokemon.
         """
         return self.id
+
+    """Move functions for the loaded pokemon."""
 
     def get_move_ids(self):
         """Summary of get_move_ids():
@@ -144,7 +195,7 @@ class Pokemon(BaseModel):
         return move_names
         
     def get_moves(self):
-        """Summary of get_move_names():
+        """Summary of get_moves():
 
         Returns:
             list[list]: A nested list of move names and ids of a pokemon in this format: [['id', 'name'], . . .]
@@ -181,4 +232,41 @@ class Pokemon(BaseModel):
         for type in self.types:
             type_ids.append(type.type.get_type_id())
         return type_ids
+    
+    def get_types(self):
+        """Summary of get_types():
+
+        Returns:
+            list[list]: A nested list of type names and ids of a pokemon in this format: [['id', 'name'], . . .]
+        """
+        type_list = list(list())
+
+        for type in self.types:
+            temp_list = list()
+            temp_list.append(type.type.get_type_id())
+            temp_list.append(type.type.get_type_name())
+            type_list.append(temp_list)
+        return type_list
+
+
+## Testing
+
+# pokemon = get_pokemon("pikachu")
+
+# print(pokemon.get_name())
+# print(pokemon.get_id())
+# print(pokemon.get_moves())
+# print(pokemon.get_move_ids())
+# print(pokemon.get_move_names())
+# print(pokemon.get_type_names())
+# print(pokemon.get_type_ids())
+# print(pokemon.get_types())
+# print(pokemon.model_dump_json())
+
+# pokemon_move = get_move(pokemon.get_move_ids()[0])
+# print(pokemon_move.get_name())
+# print(pokemon_move.get_id())
+# print(pokemon_move.get_type())
+# print(pokemon_move.get_power())
+# print(pokemon_move.model_dump_json())
 

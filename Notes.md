@@ -1,5 +1,14 @@
 # Notes:
 
+#### _12-27-23_
+Finished merging the new custom api wrapper with the working code. I've noticed that the way that moves are iterated to be 
+loaded onto the Pokemon class- in general, is slow. But this is fine since it seems like the only way to load the moves
+of a pokemon and its data. I think it also comes with the nature of the program... how else will you lead the move data
+of each move a pokemon has? The pokemon with the most moves is "mew". I also tried it with ditto, who has only one move, which takes between .1 and .3 seconds. After testing with mew, it took 85.34 seconds... so about 1 min and 25.34 seconds.
+Because of that, it'd be great to have a loading state in the front-end.
+
+The README.md file was also updated.
+
 #### _12-25-23_
 After looking over the options I had for pokemon api wrappers, I decided to make my own makeshift wrapper.
 I'm using libraries like pydantic and requests to receive pokemon data and sort it out onto objects- or as 
@@ -8,10 +17,10 @@ finally got the Pokemon model working, now I want to get the Move model working.
 it work similarly to how aiopokeapi works where you make a request through the wrapper with a pokemon's name or id.
 It'd be a cool project to make the complete wrapper, but I just want to get this project off the ground. **My one concern, the wrapper is too slow.**
 - ### tl;dr
-	+ Work on getting the Move pydantic model into a working condition.
-	+ Modularize the makeshift wrapper
-	+ Give the wrapper a name
-	+ Merge the working prototype with the new makeshift wrapper
+	+ [x] Work on getting the Move pydantic model into a working condition.
+	+ [x] Modularize the makeshift wrapper
+	+ [x] Give the wrapper a name
+	+ [x] Merge the working prototype with the new makeshift wrapper
 
 #### _12-19-23_
 I've tried deleting the old virtual environment and installing a new one, but it didn't work. Since I've had this issue for a long time, I'm going to have to use another api-wrapper.
