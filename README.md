@@ -7,12 +7,16 @@ Poketype is a web-application that takes two pokemon and gives you the most effe
 - Front end development will continue when the back end (prototype) is functioning.
 - Hosting will be done through Firebase with Flask instead of GitHub
 
+### Milestones:
+- [x] Back-end
+- [ ] Hosting and Development
+- [ ] Front-end
+
 ## TODO:
 As of now, I'm planning on making a prototype and then following it up with a more in depth implementation in the web version.
 
 + Back-end
     - [x] Implementing Move and Pokemon class into all functions.
-        
     - [x] API related
         + [x] Verify you can input pokemon
         + [x] Verify you can retrieve the moves that are effective with that pokemon. This is sorted with respect to the type of move (which is its effectiveness) and how much damage the move actually does.
@@ -21,18 +25,19 @@ As of now, I'm planning on making a prototype and then following it up with a mo
         + [x] Accessing different type of pokemon
         + [x] Accessing the types of attacks a particular pokemon can do
         + [x] Accessing damage an attack can do interms of type
-    - [ ] Finish the Prototype app program.
+    - [x] Finish the Prototype app program.
+        - [x] Documentation
         - [x] Parse api data
             + [x] Pokémon & Move Name
             + [x] Move Base Power
             + [x] Move type
-        - [x] Develop a txt file to store single type effectiveness of Pokémon of a single type. 
-            - **Found one online** Refer to: https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
-            - Note: This also works for dual type pokemon, refer to Notes#8-9-23
         - [x] Pokémon type effectiveness needs:
             - [x] Attacking Move base power
             - [x] Attacking Move type
             - [x] Defending Pokémon type(s) {Single type and Dual type}
+        - [x] Develop a txt file to store single type effectiveness of Pokémon of a single type. 
+            - **Found one online** Refer to: https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
+            - Note: This also works for dual type pokemon. Refer the the bullet point below.
         - [x] Find a method to implement the dual type Pokémon chart. Refer to the raw format of README.md for a formatted explanation.
             + Suppose we have Charizard, charizard is of these types:
                 
@@ -52,18 +57,17 @@ As of now, I'm planning on making a prototype and then following it up with a mo
 
                 Then multiplying those effectiveness: 
                 2 (Water vs. Fire) * 1 (Water vs. Flying) = 2 (Resulting Effectiveness)
-        - [ ] Parse and Load type chart from https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
-            + [ ] Load Type Chart Function - Loads the type chart with data from https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
-            + [ ] Type Chart Dump - Dumps all data processed with the type chart.
-        - [ ] Eval efficacy function - One of the most important functions in the program which serves in determining the effectiveness of a move.
-            + [ ] Use these in to return the resulting effectiveness of a Move with respect to its type and the defending pokemon's defense
-                - [ ] No effect (0%) *No damage*
-                - [ ] Not very effective (50%) *Cuts base power by half*
-                - [ ] Normal (100%) *Normal base power*
-                - [ ] Super-effective (200%) *Doubles base power*
-            + [ ] Pokemon Type Efficacy Dump - Dumps all effective moves against a pokemon.
+        - [x] Parse and Load type chart from https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
+            + [x] Load Type Chart Function - Loads the type chart with data from https://github.com/johanngan/pokemon_types/blob/master/type_chart.txt
+            + This is unnecessary, ~~Type Chart Dump - Dumps all data processed with the type chart.~~
+        - [x] Eval efficacy function - One of the most important functions in the program which serves in determining the effectiveness of a move.
+            + [x] Use these in to return the resulting effectiveness of a Move with respect to its type and the defending pokemon's defense
+                - [x] No effect (0%) *No damage*
+                - [x] Not very effective (50%) *Cuts base power by half*
+                - [x] Normal (100%) *Normal base power*
+                - [x] Super-effective (200%) *Doubles base power*
+            + [x] Pokemon Type Efficacy Dump - Dumps all effective moves against a pokemon.
         - **Additional Feature** Damage filter - If attack is normal, then search for the normal move with the most damage. Same with any other move effectiveness.
-    - [ ] Develop the front end after the back-end prototype app is done
 
 + Hosting and Development:
     - [ ] Use flask and python to make a webapp - Preferably one that works like a "portfolio". Ex. portfolio.com/poketype, portfolio.com/about, etc.

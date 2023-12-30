@@ -1,9 +1,11 @@
+from functools import lru_cache
 import requests
 from typing import Optional
 from pydantic import BaseModel
 
 """Move Object Pydantic Models"""
 
+@lru_cache(maxsize=100)
 def get_move(name_or_id: str | int):
     """Summary of get_move(name_or_id: str | int)
             Requests and returns a move from pokeapi to populate a Move object to return.    
@@ -67,6 +69,7 @@ class MoveApi(BaseModel):
 
 """Pokemon Object Pydantic Models"""
 
+@lru_cache(maxsize=50)
 def get_pokemon(name_or_id: str | int):
     """Summary of get_pokemon(name_or_id: str | int)
             Requests and returns a pokemon from pokeapi to populate a Pokemon object to return.    

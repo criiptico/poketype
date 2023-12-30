@@ -1,345 +1,220 @@
-Enter pokemon 1: Enter pokemon 2: Pokemon 1: pikachu 	Pokemon 2: charizard
-pikachu
-['5', '6', '9', '21', '24', '25', '29', '34', '36', '38', '39', '45', '57', '66', '68', '69', '70', '84', '85', '86', '87', '91', '92', '97', '98', '99', '102', '104', '111', '113', '115', '117', '129', '130', '148', '156', '164', '168', '173', '174', '179', '182', '186', '189', '192', '197', '203', '204', '205', '207', '209', '213', '214', '216', '218', '223', '227', '231', '237', '240', '249', '253', '263', '264', '268', '270', '280', '282', '290', '313', '324', '343', '344', '347', '351', '363', '364', '374', '393', '417', '435', '445', '447', '451', '486', '496', '497', '521', '527', '528', '574', '577', '583', '589', '590', '598', '604', '609', '673', '804', '851', '885']
-Current move id: 5
-Current move id: 6
-Current move id: 9
-Current move id: 21
-Current move id: 24
-Current move id: 25
-Current move id: 29
-Current move id: 34
-Current move id: 36
-Current move id: 38
-	An Error Occured with 38
-Current move id: 39
-Current move id: 45
-Current move id: 57
-	An Error Occured with 57
-Current move id: 66
-	An Error Occured with 66
-Current move id: 68
-Current move id: 69
-Current move id: 70
-Current move id: 84
-Current move id: 85
-	An Error Occured with 85
-Current move id: 86
-	An Error Occured with 86
-Current move id: 87
-	An Error Occured with 87
-Current move id: 91
-	An Error Occured with 91
-Current move id: 92
-	An Error Occured with 92
-Current move id: 97
-Current move id: 98
-Current move id: 99
-Current move id: 102
-Current move id: 104
-Current move id: 111
-Current move id: 113
-Current move id: 115
-Current move id: 117
-Current move id: 129
-Current move id: 130
-	An Error Occured with 130
-Current move id: 148
-	An Error Occured with 148
-Current move id: 156
-Current move id: 164
-Current move id: 168
-	An Error Occured with 168
-Current move id: 173
-	An Error Occured with 173
-Current move id: 174
-Current move id: 179
-Current move id: 182
-Current move id: 186
-Current move id: 189
-Current move id: 192
-	An Error Occured with 192
-Current move id: 197
-Current move id: 203
-Current move id: 204
-Current move id: 205
-Current move id: 207
-	An Error Occured with 207
-Current move id: 209
-Current move id: 213
-Current move id: 214
-Current move id: 216
-Current move id: 218
-Current move id: 223
-Current move id: 227
-Current move id: 231
-Current move id: 237
-	An Error Occured with 237
-Current move id: 240
-Current move id: 249
-	An Error Occured with 249
-Current move id: 253
-	An Error Occured with 253
-Current move id: 263
-Current move id: 264
-Current move id: 268
-Current move id: 270
-Current move id: 280
-Current move id: 282
-	An Error Occured with 282
-Current move id: 290
-Current move id: 313
-Current move id: 324
-Current move id: 343
-	An Error Occured with 343
-Current move id: 344
-Current move id: 347
-Current move id: 351
-Current move id: 363
-	An Error Occured with 363
-Current move id: 364
-	An Error Occured with 364
-Current move id: 374
-	An Error Occured with 374
-Current move id: 393
-	An Error Occured with 393
-Current move id: 417
-	An Error Occured with 417
-Current move id: 435
-	An Error Occured with 435
-Current move id: 445
-	An Error Occured with 445
-Current move id: 447
-	An Error Occured with 447
-Current move id: 451
-	An Error Occured with 451
-Current move id: 486
-	An Error Occured with 486
-Current move id: 496
-	An Error Occured with 496
-Current move id: 497
-	An Error Occured with 497
-Current move id: 521
-	An Error Occured with 521
-Current move id: 527
-	An Error Occured with 527
-Current move id: 528
-	An Error Occured with 528
-Current move id: 574
-	An Error Occured with 574
-Current move id: 577
-	An Error Occured with 577
-Current move id: 583
-	An Error Occured with 583
-Current move id: 589
-	An Error Occured with 589
-Current move id: 590
-	An Error Occured with 590
-Current move id: 598
-	An Error Occured with 598
-Current move id: 604
-	An Error Occured with 604
-Current move id: 609
-	An Error Occured with 609
-Current move id: 673
-	An Error Occured with 673
-Current move id: 804
-	An Error Occured with 804
-Current move id: 851
-	An Error Occured with 851
-Current move id: 885
-	An Error Occured with 885
-charizard
-['5', '7', '9', '10', '14', '15', '17', '19', '25', '29', '34', '36', '38', '43', '45', '46', '52', '53', '63', '66', '68', '69', '70', '76', '82', '83', '89', '90', '91', '92', '99', '102', '104', '108', '111', '115', '117', '126', '129', '130', '154', '156', '157', '163', '164', '173', '174', '182', '184', '189', '200', '201', '203', '206', '207', '210', '211', '213', '214', '216', '218', '223', '225', '231', '232', '237', '239', '241', '242', '249', '251', '257', '261', '263', '264', '270', '280', '290', '299', '307', '311', '314', '315', '317', '332', '337', '349', '355', '363', '366', '374', '394', '403', '406', '411', '416', '421', '424', '432', '445', '466', '468', '481', '488', '496', '497', '507', '510', '512', '517', '519', '523', '525', '526', '535', '542', '590', '595', '612', '693', '784', '799', '814', '815', '851']
-Current move id: 5
-Current move id: 7
-Current move id: 9
-Current move id: 10
-Current move id: 14
-	An Error Occured with 14
-Current move id: 15
-Current move id: 17
-	An Error Occured with 17
-Current move id: 19
-	An Error Occured with 19
-Current move id: 25
-Current move id: 29
-Current move id: 34
-Current move id: 36
-Current move id: 38
-	An Error Occured with 38
-Current move id: 43
-Current move id: 45
-Current move id: 46
-	An Error Occured with 46
-Current move id: 52
-Current move id: 53
-	An Error Occured with 53
-Current move id: 63
-Current move id: 66
-	An Error Occured with 66
-Current move id: 68
-Current move id: 69
-Current move id: 70
-Current move id: 76
-	An Error Occured with 76
-Current move id: 82
-Current move id: 83
-	An Error Occured with 83
-Current move id: 89
-Current move id: 90
-Current move id: 91
-	An Error Occured with 91
-Current move id: 92
-	An Error Occured with 92
-Current move id: 99
-Current move id: 102
-Current move id: 104
-Current move id: 108
-Current move id: 111
-Current move id: 115
-Current move id: 117
-Current move id: 126
-	An Error Occured with 126
-Current move id: 129
-Current move id: 130
-	An Error Occured with 130
-Current move id: 154
-Current move id: 156
-Current move id: 157
-	An Error Occured with 157
-Current move id: 163
-Current move id: 164
-Current move id: 173
-	An Error Occured with 173
-Current move id: 174
-Current move id: 182
-Current move id: 184
-	An Error Occured with 184
-Current move id: 189
-Current move id: 200
-	An Error Occured with 200
-Current move id: 201
-Current move id: 203
-Current move id: 206
-Current move id: 207
-	An Error Occured with 207
-Current move id: 210
-	An Error Occured with 210
-Current move id: 211
-Current move id: 213
-Current move id: 214
-Current move id: 216
-Current move id: 218
-Current move id: 223
-Current move id: 225
-Current move id: 231
-Current move id: 232
-Current move id: 237
-	An Error Occured with 237
-Current move id: 239
-Current move id: 241
-Current move id: 242
-Current move id: 249
-	An Error Occured with 249
-Current move id: 251
-	An Error Occured with 251
-Current move id: 257
-	An Error Occured with 257
-Current move id: 261
-	An Error Occured with 261
-Current move id: 263
-Current move id: 264
-Current move id: 270
-Current move id: 280
-Current move id: 290
-Current move id: 299
-Current move id: 307
-Current move id: 311
-Current move id: 314
-	An Error Occured with 314
-Current move id: 315
-	An Error Occured with 315
-Current move id: 317
-	An Error Occured with 317
-Current move id: 332
-Current move id: 337
-Current move id: 349
-Current move id: 355
-	An Error Occured with 355
-Current move id: 363
-	An Error Occured with 363
-Current move id: 366
-	An Error Occured with 366
-Current move id: 374
-	An Error Occured with 374
-Current move id: 394
-	An Error Occured with 394
-Current move id: 403
-	An Error Occured with 403
-Current move id: 406
-	An Error Occured with 406
-Current move id: 411
-	An Error Occured with 411
-Current move id: 416
-	An Error Occured with 416
-Current move id: 421
-	An Error Occured with 421
-Current move id: 424
-	An Error Occured with 424
-Current move id: 432
-	An Error Occured with 432
-Current move id: 445
-	An Error Occured with 445
-Current move id: 466
-	An Error Occured with 466
-Current move id: 468
-	An Error Occured with 468
-Current move id: 481
-	An Error Occured with 481
-Current move id: 488
-	An Error Occured with 488
-Current move id: 496
-	An Error Occured with 496
-Current move id: 497
-	An Error Occured with 497
-Current move id: 507
-	An Error Occured with 507
-Current move id: 510
-	An Error Occured with 510
-Current move id: 512
-	An Error Occured with 512
-Current move id: 517
-	An Error Occured with 517
-Current move id: 519
-	An Error Occured with 519
-Current move id: 523
-	An Error Occured with 523
-Current move id: 525
-	An Error Occured with 525
-Current move id: 526
-	An Error Occured with 526
-Current move id: 535
-	An Error Occured with 535
-Current move id: 542
-	An Error Occured with 542
-Current move id: 590
-	An Error Occured with 590
-Current move id: 595
-	An Error Occured with 595
-Current move id: 612
-	An Error Occured with 612
-Current move id: 693
-	An Error Occured with 693
-Current move id: 784
-	An Error Occured with 784
-Current move id: 799
-	An Error Occured with 799
-Current move id: 814
-	An Error Occured with 814
-Current move id: 815
-	An Error Occured with 815
-Current move id: 851
-	An Error Occured with 851
-Pokemon 1 data: [PokemonType(slot=1, type=MinimalResource(id=13, name='electric'))]
-Pokemon 2 data: [PokemonType(slot=1, type=MinimalResource(id=10, name='fire')), PokemonType(slot=2, type=MinimalResource(id=3, name='flying'))]
+Enter pokemon 1: Enter pokemon 2: 
+ blastoise  is weak against. . .
+Efficacy: 0
+tail-whip normal None
+growl normal None
+counter fighting None
+seismic-toss fighting None
+thunder-wave electric None
+toxic poison None
+agility psychic None
+mimic normal None
+double-team normal None
+defense-curl normal None
+light-screen psychic None
+reflect psychic None
+bide normal None
+flash normal None
+rest psychic None
+substitute normal None
+curse ghost None
+reversal fighting None
+protect normal None
+sweet-kiss fairy None
+detect fighting None
+endure normal None
+charm fairy None
+swagger normal None
+attract normal None
+sleep-talk normal None
+return normal None
+frustration normal None
+encore normal None
+rain-dance water None
+charge electric None
+helping-hand normal None
+fake-tears dark None
+calm-mind psychic None
+natural-gift normal None
+fling dark None
+magnet-rise electric None
+nasty-plot dark None
+captivate normal None
+grass-knot grass None
+electro-ball electric None
+play-nice normal None
+confide normal None
+eerie-impulse electric None
+electric-terrain electric None
+laser-focus normal None
+Efficacy: 0.5
+surf water 90
+iron-tail steel 100
+Efficacy: 1
+mega-punch normal 80
+pay-day normal 40
+slam normal 80
+double-kick fighting 30
+mega-kick normal 120
+headbutt normal 70
+body-slam normal 85
+take-down normal 90
+double-edge normal 120
+submission fighting 80
+strength normal 80
+dig ground 80
+quick-attack normal 40
+rage normal 20
+swift normal 60
+skull-bash normal 130
+thief dark 60
+snore normal 50
+mud-slap ground 20
+rollout rock 30
+dynamic-punch fighting 100
+hidden-power normal 60
+rock-smash fighting 40
+uproar normal 90
+facade normal 70
+focus-punch fighting 150
+brick-break fighting 75
+knock-off dark 65
+secret-power normal 70
+signal-beam bug 75
+covet normal 60
+feint normal 30
+round normal 60
+echoed-voice normal 40
+disarming-voice fairy 40
+draining-kiss fairy 50
+play-rough fairy 90
+tera-blast normal 80
+Efficacy: 2
+thunder-punch electric 75
+thunder-shock electric 40
+thunderbolt electric 90
+thunder electric 110
+zap-cannon electric 120
+spark electric 65
+volt-tackle electric 120
+shock-wave electric 60
+discharge electric 80
+charge-beam electric 50
+volt-switch electric 70
+electroweb electric 55
+wild-charge electric 90
+nuzzle electric 20
+rising-voltage electric 70
+trailblaze grass 50
+
+ pikachu  is weak against. . .
+Efficacy: 0
+tail-whip normal None
+roar normal None
+counter fighting None
+seismic-toss fighting None
+fissure ground None
+toxic poison None
+mimic normal None
+double-team normal None
+withdraw water None
+defense-curl normal None
+reflect psychic None
+bide normal None
+rest psychic None
+substitute normal None
+curse ghost None
+protect normal None
+endure normal None
+swagger normal None
+attract normal None
+sleep-talk normal None
+return normal None
+frustration normal None
+rain-dance water None
+hail ice None
+helping-hand normal None
+iron-defense steel None
+gyro-ball steel None
+natural-gift normal None
+fling dark None
+captivate normal None
+shell-smash normal None
+work-up normal None
+confide normal None
+Efficacy: 0.5
+iron-tail steel 100
+flash-cannon steel 80
+Efficacy: 1
+mega-punch normal 80
+ice-punch ice 75
+mega-kick normal 120
+headbutt normal 70
+tackle normal 40
+body-slam normal 85
+take-down normal 90
+double-edge normal 120
+bite dark 60
+water-gun water 40
+hydro-pump water 110
+surf water 90
+ice-beam ice 90
+blizzard ice 110
+bubble-beam water 65
+hyper-beam normal 150
+submission fighting 80
+strength normal 80
+rage normal 20
+waterfall water 80
+skull-bash normal 130
+bubble water 40
+rock-slide rock 75
+snore normal 50
+icy-wind ice 55
+outrage dragon 120
+rollout rock 30
+false-swipe normal 40
+dynamic-punch fighting 100
+rapid-spin normal 50
+hidden-power normal 60
+crunch dark 80
+rock-smash fighting 40
+whirlpool water 35
+fake-out normal 40
+facade normal 70
+focus-punch fighting 150
+brick-break fighting 75
+secret-power normal 70
+dive water 80
+hydro-cannon water 150
+weather-ball normal 50
+rock-tomb rock 60
+signal-beam bug 75
+muddy-water water 90
+water-pulse water 60
+brine water 65
+aura-sphere fighting 80
+dark-pulse dark 80
+aqua-tail water 90
+dragon-pulse dragon 85
+focus-blast fighting 120
+giga-impact normal 150
+avalanche ice 60
+zen-headbutt psychic 80
+rock-climb normal 90
+aqua-jet water 40
+smack-down rock 50
+round normal 60
+scald water 80
+water-pledge water 80
+dragon-tail dragon 60
+power-up-punch fighting 40
+liquidation water 85
+body-press fighting 80
+terrain-pulse normal 50
+flip-turn water 60
+Efficacy: 2
+earthquake ground 100
+dig ground 80
+mud-slap ground 20
+bulldoze ground 60

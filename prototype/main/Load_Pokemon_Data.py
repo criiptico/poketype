@@ -39,7 +39,7 @@ class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon &
                 log = logging.getLogger()
                 log.exception("An Error Occured with " + move)
 
-            pokemon.moves[move_data.name] = new_move
+            pokemon.moves[move_data.id] = new_move
 
     # def __api_delim(self, to_search: str, to_find, up_to):
     #     to_return = []
