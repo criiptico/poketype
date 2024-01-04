@@ -1,22 +1,13 @@
 from flask import Flask, render_template, request
 
-# from ..prototype.main.poketype import eval_pokemon
-# import sys
-# print(sys.path)
-import sys
-sys.path.append('~/poketype/PokeTypeAdvantage')
-from PokeTypeAdvantage import eval_pokemon
-
-# sys.path.append('/home/adrian/projects/poketype')
-# from prototype.main.poketype import eval_pokemon
-# from ...prototype.main.poketype import eval_pokemon
-# from poketype import eval_pokemon
-
-# from prototype.main.poketype import eval_pokemon
-# import sys
-# print(sys.path)
-# sys.path.insert(0, '/home/adrian/projects/poketype')
-# from PokeTypeAdvantage.main.poketype import eval_pokemon
+# Following error from this line: Traceback (most recent call last):
+#   File "/home/adrian/projects/poketype-copy/poketype/Front-end/main/home.py", line 4, in <module>
+#     from PokeTypeAdvantage.main.PokeTypeAdvantage import eval_pokemon
+# ModuleNotFoundError: No module named 'PokeTypeAdvantage'
+#
+# Read up on this link to formalize PokeTypeAdvantage as a formal python package:
+# https://www.freecodecamp.org/news/build-your-first-python-package/
+from PokeTypeAdvantage.main.PokeTypeAdvantage import eval_pokemon
 
 app = Flask(__name__, template_folder="../templates/")
 
