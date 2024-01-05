@@ -16,5 +16,15 @@
         <div class="mid"><p>This is where the input goes.</p></div>
         <div class="bot"><p>This is where the results are.</p></div>
     </div>
+
+    <div class="evaluating_pokemon">
+        <h1>Evaluate Pokemon:</h1>
+        <form method="GET" action="{{ url_for('evaluate_pokemon') }}">
+            <input type="text" name="pokemon_1" placeholder="Enter Pokemon 1">
+            <input type="text" name="pokemon_2" placeholder="Enter Pokemon 2">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
 </body>
 </html>

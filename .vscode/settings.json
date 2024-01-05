@@ -1,5 +1,1 @@
-{
-    "python.analysis.extraPaths": [
-        "./prototype/main/aiopokeapi/src"
-    ]
-}
+{}
