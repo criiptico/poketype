@@ -7,6 +7,9 @@ from flask import Flask, render_template, request
 #
 # Read up on this link to formalize PokeTypeAdvantage as a formal python package:
 # https://www.freecodecamp.org/news/build-your-first-python-package/
+#
+#
+# Also note, make sure to do a fresh virtual environment installation.
 from PokeTypeAdvantage.main.PokeTypeAdvantage import eval_pokemon
 
 app = Flask(__name__, template_folder="../templates/")
