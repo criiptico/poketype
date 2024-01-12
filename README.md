@@ -70,7 +70,7 @@ As of now, I'm planning on making a prototype and then following it up with a mo
         - **Additional Feature** Damage filter - If attack is normal, then search for the normal move with the most damage. Same with any other move effectiveness.
 
 + Hosting and Development:
-    - [ ] Use flask and python to make a webapp - Preferably one that works like a "portfolio". Ex. portfolio.com/poketype, portfolio.com/about, etc.
+    - [ ] Use flask and python to make a webapp prototype - Preferably one that works like a "portfolio". Ex. portfolio.com/poketype, portfolio.com/about, etc.
         - Form handling
             + [ ] Managing dynamic data with and without flask and/or python. - Dynamic: ex. What is your name: _INPUT:_ someName \ _OUTPUTS:_ Hi someName!
                 - [x] Receiving data
