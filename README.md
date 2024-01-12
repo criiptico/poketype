@@ -4,7 +4,7 @@ Poketype is a web-application that takes two pokemon and gives you the most effe
 ###### Please note: This is a work in progress build and I'm learning these technologies along the way. This is my first time dealing with python, html forms, and Flask in the context of a web application. I appreciate your patience.
 
 ## Note:
-- Front end development will continue when the back end (prototype) is functioning.
+~~- Front end development will continue when the back end (prototype) is functioning.~~
 - Hosting will be done through Firebase with Flask instead of GitHub
 
 ### Milestones:
