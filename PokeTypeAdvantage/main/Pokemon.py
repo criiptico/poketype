@@ -1,4 +1,4 @@
-from Move import Move
+from main.Move import Move
 
 class Pokemon: # Data structur for the standard info of a pokemon. Includes the name, id, type(s), and moves (move name & move id) a pokemon has
     def __init__(self):

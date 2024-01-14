@@ -72,15 +72,15 @@ As of now, I'm planning on making a prototype and then following it up with a mo
 + Hosting and Development:
     - [ ] Use flask and python to make a webapp - Preferably one that works like a "portfolio". Ex. portfolio.com/poketype, portfolio.com/about, etc.
         - Form handling
-            + [ ] Managing dynamic data with and without flask and/or python. - Dynamic: ex. What is your name: _INPUT:_ someName \ _OUTPUTS:_ Hi someName!
+            + [x] Managing dynamic data with and without flask and/or python. - Dynamic: ex. What is your name: _INPUT:_ someName \ _OUTPUTS:_ Hi someName!
                 - [x] Receiving data
                     + [x] Figure out how to access it once it's received
                     + [x] Figure out how to use it
-                - [ ] Sending data
-                    - [ ] Non-calculative and dynamic data
-                    - [ ] Calculative and dynamic data
-                    - [ ] Figure out how to send it back
-                    - [ ] Figure out how to output data onto client
+                - [x] Sending data
+                    - [x] Non-calculative and dynamic data
+                    - [x] Calculative and dynamic data
+                    - [x] Figure out how to send it back
+                    - [x] Figure out how to output data onto client
     - [ ] Find a way to host on Firebase
     - [ ] Purchase a domain - Build around a "portfolio" website. Ex. portfolio.com/poketype, portfolio.com/about, etc.
 

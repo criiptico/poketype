@@ -1,5 +1,15 @@
 # Notes:
 
+#### _1-14-24_
+Figured out how to receive and send information with flask. Next steps is to design the front end.
+Before picking somewhere to host. I want to get a good idea on which technology I want to learn or would
+be best to use to design the front end.
+- ### One of 3 things to design the front end:
+	+ Bootstrap (Uses Javascript?)
+	+ React (Uses Javascript?)
+	+ Plain CSS
+In addition to the front end, I need to take into account some cases for user input (Respond and restrict to a Pokemon name.)
+
 #### _12-27-23_
 Finished merging the new custom api wrapper with the working code. I've noticed that the way that moves are iterated to be 
 loaded onto the Pokemon class- in general, is slow. But this is fine since it seems like the only way to load the moves

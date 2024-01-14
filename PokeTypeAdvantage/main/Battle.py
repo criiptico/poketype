@@ -1,5 +1,6 @@
-from Pokemon import Pokemon
-from Move import Move
+from main.Pokemon import Pokemon
+import os
+# from main.Move import Move
 
 class Battle: # Calculates efficacy data of two pokemon
     def __init__(self, pokemon_1: Pokemon, pokemon_2: Pokemon) -> None:
@@ -14,7 +15,11 @@ class Battle: # Calculates efficacy data of two pokemon
         self.effective_against_pokemon_1 = dict(list())  # Format: dict(list()) -> [[0] = [move_1, move_2, . . .], [0.5] = [. . .], [1] = [. . .], [2] = [. . .]]
         self.effective_against_pokemon_2 = dict(list())  # Format: dict(list()) -> [[0] = [move_1, move_2, . . .], [0.5] = [. . .], [1] = [. . .], [2] = [. . .]]
         self.type_chart = dict() # Format: [attacking_type] = ([defending_type] = efficacy_multiplier)
-        self.__parse_type_chart("../resources/single_type_chart.txt")
+        
+        base_dir = os.path.dirname(os.path.abspath(__file__)) # Sets the path of the current file
+        file_path = os.path.join(base_dir, '../resources/single_type_chart.txt') # Sets file_path in addition to base_dir
+        self.__parse_type_chart(file_path)
+        # self.__parse_type_chart("../resources/single_type_chart.txt") # In the original code.
 
     def get_effective_moves_against_pokemon_1(self):
         """Summary of get_efffective_moves_against_pokemon_1():

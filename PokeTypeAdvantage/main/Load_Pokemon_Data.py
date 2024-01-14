@@ -1,9 +1,8 @@
 import logging
-import CustomPokeApiWrapper as PokeWrapper
-
-from CustomPokeApiWrapper import PokemonApi
-from Pokemon import Pokemon
-from Move import Move
+import main.CustomPokeApiWrapper as PokeWrapper
+from main.CustomPokeApiWrapper import PokemonApi
+from main.Pokemon import Pokemon
+from main.Move import Move
 
 class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon & moves), and ids (pokemon & moves)
 

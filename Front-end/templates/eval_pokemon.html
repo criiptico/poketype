@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>PokeType | What's good against that pokemon if I have this pokemon?</title>
+<head>
+    <!-- <link rel="stylesheet" href="./html_css_js/indexStyle.css"> -->
+    <link rel="stylesheet" href="./Styles/indexStyle.css">
+</head>
+
+<body>
+    <div class="boxed" >
+        <!-- <div class="PokeType"><a href="https://criiptico.github.io/poketype/">PokeType</a><img id="pokeball" src="./html_css_js/pokeball.png"></div> -->
+        <div class="PokeType"><a href="https://criiptico.github.io/poketype/">PokeType</a><img id="pokeball" src="../Styles/pokeball.png" style="width: 25%; height: 25%;"></div>
+    </div>
+    <!-- <div class="pokeBall">
+        <div class="top"><p>This is where the instructions are: </p></div> 
+        <div class="mid"><p>This is where the input goes.</p></div>
+        <div class="bot"><p>This is where the results are.</p></div>
+    </div> -->
+
+    <!--Output of evaluated pokemon. Make sure to disable Evaluate pokemon button.-->
+    <div class="evaluating_pokemon">
+        <h1>Evaluate Pokemon:</h1>
+        <form method="GET" action="{{ url_for('evaluate_pokemon') }}">
+            <input disabled type="text" name="pokemon_1" placeholder="{{ pokemon1 }}">
+            <input disabled type="text" name="pokemon_2" placeholder="{{ pokemon2 }}">
+            <button disabled type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="pokemon_1" style="overflow: scroll; width: 800px; height: 150px;"> 
+        {% for key in efficacy[0].keys() %}
+            {% for move in efficacy[0][key] %}
+                {% if move.power %}
+                    {% set power_multiplier = move.power * key %}
+                {% else %}
+                    {% set power_multiplier = 0 %}
+                {% endif %}
+                {% set base_power = move.power %}
+                {% set move_name = move.name %}
+                {% set move_type = move.type %}
+
+                {% if move_type == "normal" %}
+                    <div class="move"><div class="type_normal">Normal</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "fire" %}
+                    <div class="move"><div class="type_fire">Fire</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "water" %}
+                    <div class="move"><div class="type_water">Water</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "electric" %}
+                    <div class="move"><div class="type_electric">Electric</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "grass" %}
+                    <div class="move"><div class="type_grass">Grass</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "ice" %}
+                    <div class="move"><div class="type_ice">Ice</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "fighting" %}
+                    <div class="move"><div class="type_fighting">Fighting</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "poison" %}
+                    <div class="move"><div class="type_poison">Poison</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "ground" %}
+                    <div class="move"><div class="type_ground">Ground</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "flying" %}
+                    <div class="move"><div class="type_flying">Flying</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "psychic" %}
+                    <div class="move"><div class="type_psychic">Psychic</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "bug" %}
+                    <div class="move"><div class="type_bug">Bug</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "rock" %}
+                    <div class="move"><div class="type_rock">Rock</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "ghost" %}
+                    <div class="move"><div class="type_ghost">Ghost</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "dragon" %}
+                    <div class="move"><div class="type_dragon">Dragon</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "dark" %}
+                    <div class="move"><div class="type_dark">Dark</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "steel" %}
+                    <div class="move"><div class="type_steel">Steel</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "fairy" %}
+                    <div class="move"><div class="type_fairy">Fairy</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="pokemon_2" style="overflow: scroll; width: 800px; height: 150px;">
+        {% for key in efficacy[1].keys() %}
+            {% for move in efficacy[1][key] %}
+                {% if move.power %}
+                    {% set power_multiplier = move.power * key %}
+                {% else %}
+                    {% set power_multiplier = 0 %}
+                {% endif %}
+                {% set base_power = move.power %}
+                {% set move_name = move.name %}
+                {% set move_type = move.type %}
+
+                {% if move_type == "normal" %}
+                    <div class="move"><div class="type_normal">Normal</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "fire" %}
+                    <div class="move"><div class="type_fire">Fire</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "water" %}
+                    <div class="move"><div class="type_water">Water</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "electric" %}
+                    <div class="move"><div class="type_electric">Electric</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "grass" %}
+                    <div class="move"><div class="type_grass">Grass</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "ice" %}
+                    <div class="move"><div class="type_ice">Ice</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "fighting" %}
+                    <div class="move"><div class="type_fighting">Fighting</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "poison" %}
+                    <div class="move"><div class="type_poison">Poison</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "ground" %}
+                    <div class="move"><div class="type_ground">Ground</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "flying" %}
+                    <div class="move"><div class="type_flying">Flying</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "psychic" %}
+                    <div class="move"><div class="type_psychic">Psychic</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "bug" %}
+                    <div class="move"><div class="type_bug">Bug</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "rock" %}
+                    <div class="move"><div class="type_rock">Rock</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "ghost" %}
+                    <div class="move"><div class="type_ghost">Ghost</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "dragon" %}
+                    <div class="move"><div class="type_dragon">Dragon</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "dark" %}
+                    <div class="move"><div class="type_dark">Dark</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "steel" %}
+                    <div class="move"><div class="type_steel">Steel</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% elif move_type == "fairy" %}
+                    <div class="move"><div class="type_fairy">Fairy</div><div class="name">{{ move_name }}</div><div class="power_base">{{ move_power }}</div><div class="power_multiplier">{{ power_multiplier }}</div></div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <!--This button appears only after an evaluation, it redirects to the home.html file.-->
+    <a href="{{ url_for('home') }}"><button type="button">Evaluate Another Pokemon</button></a>
+    
+</body>
+</html>

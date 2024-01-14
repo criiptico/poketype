@@ -2,6 +2,7 @@ setup.py
 PokeTypeAdvantage.egg-info/PKG-INFO
 PokeTypeAdvantage.egg-info/SOURCES.txt
 PokeTypeAdvantage.egg-info/dependency_links.txt
+PokeTypeAdvantage.egg-info/requires.txt
 PokeTypeAdvantage.egg-info/top_level.txt
 main/Battle.py
 main/CustomPokeApiWrapper.py

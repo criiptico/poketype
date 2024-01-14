@@ -7,7 +7,7 @@ setup(
     author='Adrian Quiroz - aka criiptico',
     author_email='adrianquiroz166@gmail.com',
     description='A package for evaluating Pokémon type advantages',
-    install_requirements=['pydantic', 'requests'],
+    install_requires=['pydantic', 'requests'],
     python_requires='>=3.10.12'
     
 )
