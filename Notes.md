@@ -4,6 +4,7 @@
 After some research, I've found this video that is super helpful at explaining of one way to use react and flask: https://www.youtube.com/watch?v=7LNl2JlZKHA . 
 I have a feeling that it's similar to this https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project , but I like the first video better. 
 It seems like I have issues with npm. Error resolved, had to update node.js. Now, it's time to figure out how to use this for my app and to learn a bit of javascript to do two things.
+
 Learn Javascript to:
 - Display data
 - Use the React framework in the design of the website.
