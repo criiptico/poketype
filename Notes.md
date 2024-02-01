@@ -1,5 +1,10 @@
 # Notes:
 
+#### _2-01-24_
+After some research, I've found this video that is super helpful at explaining of one way to use react and flask: https://www.youtube.com/watch?v=7LNl2JlZKHA . 
+I have a feeling that it's similar to this https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project , but I like the first video better. 
+It seems like I have issues with npm...?
+
 #### _1-14-24_
 Figured out how to receive and send information with flask. Next steps is to design the front end.
 Before picking somewhere to host. I want to get a good idea on which technology I want to learn or would
