@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from poketypeadvantage import eval_pokemon
 
-app = Flask(__name__, template_folder="../templates/")
+app = Flask(__name__, template_folder="../templates/", static_folder="../static")
 
 @app.route("/")
 def home():
@@ -24,6 +24,7 @@ def __eval_pokemon(pokemon_1, pokemon_2):
 
     return render_template("eval_pokemon.html", pokemon1=pokemon_1, pokemon2=pokemon_2, efficacy=move_efficacy)
     # return f"Hello {pokemon_1} and {pokemon_2}!"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
