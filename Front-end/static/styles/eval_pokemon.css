@@ -1,0 +1,200 @@
+/* 
+Pallette:
+2B2D42
+8D99AE
+EDF2F4
+EF233C
+D90429
+
+f0f0f0
+*/
+
+@font-face {
+  font-family: 'Inter';
+  src: url("../assets/fonts/Inter-Regular.ttf");
+}
+
+html{
+    /* background-color: #8D99AE; */
+    background-color: #F7F7F7;
+    font-family: 'Inter', 'Georgia';
+    color: #000000; /* Add it to the new pallete? */
+}
+
+.pokemon-moves {
+  display: flex;
+  background-color: #E6E6E6;
+  width: 1000px;
+  padding: 10px;
+  border-radius: 20px;
+  padding-bottom: 15px;
+}
+
+.pokemon-title {
+  position: sticky;
+  top: 0px;
+  padding: 5px;
+  background-color: #E6E6E6;
+}
+
+.pokemon_1 {
+  overflow-x: scroll;
+  scrollbar-color: #F7F7F7;
+  scrollbar-width: thin;
+  background-color: #E1E1E1;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 500px; 
+  height: 250px;
+}
+
+.pokemon_2 {
+  overflow-x: scroll;
+  scrollbar-color: #F7F7F7;
+  scrollbar-width: thin;
+  background-color: #E1E1E1;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 500px; 
+  height: 250px;
+}
+
+.move {
+  display: flex;
+  padding: 2px;
+}
+
+.type_normal {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_fire {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_water {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_electric {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_grass {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_ice {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_fighting {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_poison {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_ground {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_flying {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_psychic {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_bug {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_rock {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_ghost {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_dragon {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_dark {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_steel {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.type_fairy {
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.name {
+  overflow-x: scroll;
+  scrollbar-color: #F7F7F7;
+  scrollbar-width: thin;
+  width: 150px;
+  margin-right: 25px;
+}
+
+.power_base {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.power_multiplier {
+  width: 100px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+

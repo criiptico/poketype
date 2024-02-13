@@ -1,0 +1,61 @@
+/* 
+Pallette:
+2B2D42
+8D99AE
+EDF2F4
+EF233C
+D90429
+
+f0f0f0
+*/
+
+@font-face {
+    font-family: 'Inter';
+    src: url("../assets/fonts/Inter-Regular.ttf");
+}
+
+html{
+    /* background-color: #8D99AE; */
+    background-color: #F7F7F7;
+    font-family: 'Inter', 'Georgia';
+    color: #000000; /* Add it to the new pallete? */
+}
+
+
+
+
+
+
+
+
+
+.loader {
+    position: absolute;
+    top: 50%;
+    /* width: 100%; */
+    right: 50%;
+    border: 7px solid #E6E6E6;
+    border-radius: 100%;
+    border-top: 7px solid #931011;
+    border-bottom: 7px solid #1E1E1E;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
