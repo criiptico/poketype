@@ -10,6 +10,16 @@ display.
 	https://realpython.com/primer-on-jinja-templating/#include-macros
 ##### API
 - [ ] If you want to display ordered efficacy, make a sort function in Python to take into account the dict(list(move)) data structures
+### _2-12-24_
+The front end looks amazing! It's way better than before. I'm pretty happy about it 😭. I've decided that I don't need React. Flask basically does what React attempts to achieve except
+it does so with JavaScript. For now, I plan on finishing up the front end.
+TODO:
+##### \[Back end to front end tasks\]
+- Retrieve pokemon images/sprites from https://github.com/PokeAPI/sprites . This website contains pokemon sprites, I plan to use sprites from the sprites/pokemon/other/official-artwork folder.
+	+ Note: It looks like the images are names with respect to the pokemon's id.
+ 		- Verify that you're getting the pokemon's id from the pokemon wrapper, then pass it into the front end functions in flask. 	
+##### \[Front end task\]
+- Set the positions of the divs with respect to the ones in the mockup. 
 
 #### _2-01-24_
 After some research, I've found this video that is super helpful at explaining of one way to use react and flask: https://www.youtube.com/watch?v=7LNl2JlZKHA . 
