@@ -41,7 +41,7 @@ class Battle: # Calculates efficacy data of two pokemon
 
     def eval_efficacy(self):
         """Summary of eval_efficacy():
-                Evalutes the move efficacy of each pokemon and populates effective_against_pokemon_1 and
+                Evaluates the move efficacy of each pokemon and populates effective_against_pokemon_1 and
                 effective_against_pokemon_2 in the format:
                 dict(list()): [[0] = [move_1, move_2, . . .], [0.5] = [. . .], [1] = [. . .], [2] = [. . .]]
                 Note: Must run before respective get functions.        

@@ -7,16 +7,18 @@
 </head>
 
 <body>
-    <!-- <div class="loader"></div> -->
     <div class="evaluating-pokemon">
-        <!-- TODO: Use CSS to - Move these buttons to the left side and to style them -->
         <h1>Evaluate Pokemon:</h1>
         <form method="GET" action="{{ url_for('evaluate_pokemon') }}">
             <input type="text" name="pokemon_1" placeholder="Enter Pokemon 1">
             <input type="text" name="pokemon_2" placeholder="Enter Pokemon 2">
             <button type="submit">Evaluate Pokemon</button>
+                <h3 style="padding: 5px;height: 25px; background-color: #931011; position: absolute; -webkit-transition: opacity .4s ease .4s;
+                transition: opacity .4s ease .4s;">Please enter a valid Pokemon name.</h3>
         </form>
     </div>
+    <!-- TODO: Use CSS to - move these buttons to the left side and to style them -->
+    <!-- TODO: Use CSS to - add popup below these buttons signaling invalid input -->
     
 </body>
 </html>

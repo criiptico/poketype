@@ -1,5 +1,16 @@
 # Notes:
 
+#### _2-23-24_
+As of now, made the front end more UX friendly for the user and found a way to sort efficacy data in the backend for front end 
+display.
+##### Front end
+- [ ] Make a Jinja function to replace repetetive code. (Particularly the efficacy data that is being displayed)
+	https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/
+	https://blog.networktocode.com/post/using-jinja2-macros-as-template-functions/
+	https://realpython.com/primer-on-jinja-templating/#include-macros
+##### API
+- [ ] If you want to display ordered efficacy, make a sort function in Python to take into account the dict(list(move)) data structures
+
 #### _2-01-24_
 After some research, I've found this video that is super helpful at explaining of one way to use react and flask: https://www.youtube.com/watch?v=7LNl2JlZKHA . 
 I have a feeling that it's similar to this https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project , but I like the first video better. 

@@ -18,17 +18,15 @@ html{
     /* background-color: #8D99AE; */
     background-color: #F7F7F7;
     font-family: 'Inter', 'Georgia';
-    color: #000000; /* Add it to the new pallete? */
+    color: #1E1E1E; /* Add it to the new pallete? */
 }
 
 
 
-
-
-
-
-
-
+/* 
+  This was supposed to accompany the loader class div that's in home.html, 
+  but I'm not sure how to implement it 
+*/
 .loader {
     position: absolute;
     top: 50%;

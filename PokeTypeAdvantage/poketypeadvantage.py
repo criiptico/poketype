@@ -3,6 +3,14 @@ from main.Load_Pokemon_Data import Load_Pokemon_Data
 from main.Pokemon import Pokemon 
 from main.Battle import Battle
 
+def get_pokemon(pokemon: str):
+    try:
+        pokemon = pokemon.lower()
+        pokemon_data = PokeWrapper.get_pokemon(pokemon)
+    except ValueError:
+        raise ValueError
+    return pokemon_data
+
 def eval_pokemon(pokemon1: str, pokemon2: str):
     # Pokemon() is an custom imported class
     pokemon_1 = Pokemon()
@@ -15,7 +23,8 @@ def eval_pokemon(pokemon1: str, pokemon2: str):
             pokemon = pokemon.lower()
             pokemon_1_data = PokeWrapper.get_pokemon(pokemon)
         except ValueError:
-            print("Not a valid value.")
+            print("Not a valid value.") # Need to deal with this error in the front end.
+            raise ValueError
         else:
             found = True
 
@@ -26,7 +35,8 @@ def eval_pokemon(pokemon1: str, pokemon2: str):
             pokemon = pokemon.lower()
             pokemon_2_data = PokeWrapper.get_pokemon(pokemon)
         except ValueError:
-            print("Not a valid value.")
+            print("Not a valid value.") # Need to deal with this error in the front end.
+            raise ValueError
         else:
             found = True
 
@@ -38,7 +48,9 @@ def eval_pokemon(pokemon1: str, pokemon2: str):
     pokemon_battle.eval_efficacy()
 
     to_return = list()
+    # Need to send pokemon1 data [0]
     to_return.append(pokemon_battle.get_effective_moves_against_pokemon_1())
+    # Need to send pokemon2 data [1]
     to_return.append(pokemon_battle.get_effective_moves_against_pokemon_2())
 
     return to_return
