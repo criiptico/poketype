@@ -4,12 +4,12 @@
 As of now, made the front end more UX friendly for the user and found a way to sort efficacy data in the backend for front end 
 display.
 ##### Front end
-- [ ] Make a Jinja function to replace repetetive code. (Particularly the efficacy data that is being displayed)
+- [x] Make a Jinja function to replace repetetive code. (Particularly the efficacy data that is being displayed)
 	https://www.geeksforgeeks.org/how-to-use-macros-in-jinja/
 	https://blog.networktocode.com/post/using-jinja2-macros-as-template-functions/
 	https://realpython.com/primer-on-jinja-templating/#include-macros
 ##### API
-- [ ] If you want to display ordered efficacy, make a sort function in Python to take into account the dict(list(move)) data structures
+- [x] If you want to display ordered efficacy, make a sort function in Python to take into account the dict(list(move)) data structures
 ### _2-12-24_
 The front end looks amazing! It's way better than before. I'm pretty happy about it 😭. I've decided that I don't need React. Flask basically does what React attempts to achieve except
 it does so with JavaScript. For now, I plan on finishing up the front end.

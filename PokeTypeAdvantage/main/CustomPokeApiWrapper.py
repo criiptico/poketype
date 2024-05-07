@@ -156,6 +156,15 @@ class PokemonApi(BaseModel):
     weight: int
     moves: list[_PokemonMoveDetails]
     types: list[_PokemonTypeDetails]
+    sprites: dict
+
+    def get_sprites(self):
+        """Summary of get_sprites():
+        
+        Returns:
+            dict[str]: The url of this pokemon's sprite on the PokeAPI
+        """
+        return self.sprites
 
     def get_name(self):
         """Summary of get_name():

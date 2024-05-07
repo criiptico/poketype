@@ -137,7 +137,7 @@ class Battle: # Calculates efficacy data of two pokemon
         """
         efficacy_list = dict()
         efficacy_list[0] = list() # No effect
-        efficacy_list[0.5] = list() # Note very effective
+        efficacy_list[0.5] = list() # Not very effective
         efficacy_list[1] = list() # Normal effectiveness
         efficacy_list[2] = list() # Very effective
 

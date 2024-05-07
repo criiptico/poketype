@@ -66,5 +66,6 @@ class Load_Pokemon_Data: # Loads all pokemon data. Pokemon type, name (pokemon &
                 pokemon_data: Input an api Pokemon class from PokeWrapper.
         """
         pokemon.name = pokemon_data.get_name()
+        pokemon.sprites = pokemon_data.get_sprites()
         self.__load_pokemon_type_names(pokemon, pokemon_data)
         self.__load_pokemon_moves(pokemon, pokemon_data)

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from poketypeadvantage import eval_pokemon, get_pokemon
+from heap_sort_custom_data_structure import heap_sort_custom
 
 app = Flask(__name__, template_folder="../templates/", static_folder="../static")
 
@@ -28,14 +29,14 @@ def __eval_pokemon(pokemon_1, pokemon_2):
     except ValueError:
         # Return the home template, but with an error popup
         return render_template("eval_pokemon_value_error.html") # TODO: Develop this template to include a popup
+    move_efficacy = eval_pokemon(pokemon_1, pokemon_2) # Returning list(dict(list()), dict(list()))
 
-    move_efficacy = eval_pokemon(pokemon_1, pokemon_2)
-    # for item in some_items:
-    #     print(f"".join(str(item))) # Try this: https://www.youtube.com/watch?v=tMNJtYDSOBY they use jinja and js
+    return render_template("eval_pokemon.html", pokemon1=pokemon_1, pokemon2=pokemon_2, efficacy=heap_sort_custom(move_efficacy), pokemon_1_sprite=get_sprite(pokemon_1_data), pokemon_2_sprite=get_sprite(pokemon_2_data))
 
-    return render_template("eval_pokemon.html", pokemon1=pokemon_1, pokemon2=pokemon_2, efficacy=move_efficacy)
-    # return f"Hello {pokemon_1} and {pokemon_2}!"
-
+def get_sprite(pokemon_data):
+    if pokemon_data.sprites["front_default"] != None:
+        return pokemon_data.sprites["front_default"]
+    return "../static/assets/images/no_pokemon_asset.jpg"
 
 if __name__ == '__main__':
     app.run(debug=True)

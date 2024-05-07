@@ -7,6 +7,7 @@ def get_pokemon(pokemon: str):
     try:
         pokemon = pokemon.lower()
         pokemon_data = PokeWrapper.get_pokemon(pokemon)
+        # print("The address to this pokemon's front-default image is", {pokemon_data.sprites["front_default"]})
     except ValueError:
         raise ValueError
     return pokemon_data
@@ -53,7 +54,7 @@ def eval_pokemon(pokemon1: str, pokemon2: str):
     # Need to send pokemon2 data [1]
     to_return.append(pokemon_battle.get_effective_moves_against_pokemon_2())
 
-    return to_return
+    return to_return # Returning list(dict(list()), dict(list()))
 
 
 # def main():
