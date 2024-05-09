@@ -1,5 +1,9 @@
 # Notes:
 
+#### _5-09-24_
+The project is nearing completion, I'm working on the header, footer, and researching how to use firebase. [This 
+tutorial looked good for firebase](https://firebase.google.com/docs/hosting/quickstart).
+
 #### _2-23-24_
 As of now, made the front end more UX friendly for the user and found a way to sort efficacy data in the backend for front end 
 display.
