@@ -10,7 +10,7 @@ Poketype is a web-application that takes two pokemon and gives you the most effe
 ### Milestones:
 - [x] Back-end
 - [ ] Hosting and Development
-- [ ] Front-end
+- [x] Front-end
 
 ## TODO:
 As of now, I'm planning on making a prototype and then following it up with a more in depth implementation in the web version.
@@ -70,7 +70,7 @@ As of now, I'm planning on making a prototype and then following it up with a mo
         - **Additional Feature** Damage filter - If attack is normal, then search for the normal move with the most damage. Same with any other move effectiveness.
 
 + Hosting and Development:
-    - [ ] Use flask and python to make a webapp prototype - Preferably one that works like a "portfolio". Ex. portfolio.com/poketype, portfolio.com/about, etc.
+    - [x] Use flask and python to make a webapp prototype - Preferably one that works like a "portfolio". Ex. portfolio.com/poketype, portfolio.com/about, etc.
         - Form handling
             + [x] Managing dynamic data with and without flask and/or python. - Dynamic: ex. What is your name: _INPUT:_ someName \ _OUTPUTS:_ Hi someName!
                 - [x] Receiving data
@@ -85,7 +85,7 @@ As of now, I'm planning on making a prototype and then following it up with a mo
     - [ ] Purchase a domain - Build around a "portfolio" website. Ex. portfolio.com/poketype, portfolio.com/about, etc.
 
 + Front-end
-    - [ ] Web Design
-        + [ ] Work on a Mockup - Refer to "../Front-end/pokeType_mockup.png" and "../Front-end/poketype.fig"
-            - [ ] Different stages of the mockup - Unloaded and loaded pokemon
-        + [ ] Include App Instructions in the mockup - Self explanatory & you can use normal html.
+    - [x] Web Design
+        + [x] Work on a Mockup - Refer to "../Front-end/pokeType_mockup.png" and "../Front-end/poketype.fig"
+            - [x] Different stages of the mockup - Unloaded and loaded pokemon
+        + [x] Include App Instructions in the mockup - Self explanatory & you can use normal html.
