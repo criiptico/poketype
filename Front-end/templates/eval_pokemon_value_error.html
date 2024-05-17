@@ -2,27 +2,117 @@
 <html>
 <title>PokeType | What's good against that pokemon if I have this pokemon?</title>
 <head>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
-    <!-- <script src="../js/loader.js" defer></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/eval_pokemon.css') }}">
+    <link rel="icon" type="image/x-icon" href="../static/assets/images/pokeball.png">
 </head>
 
-<header>
-    <p>PokeType | What's good against that pokemon if I have this pokemon?</p>
+<header class="bg-[#1E1E1E] h-36">
+    <div class="grid grid-rows-2 gap-10">
+        <div class="text-[#EDEEEF] flex items-center justify-center font-bold"><a href="{{ url_for('home') }}">PokeType | What's good against that pokemon if I have this pokemon?</a></div>
+        <div class="columns-3 font-extrabold text-2xl gap-32 flex items-center justify-center" style="color:#E6E6E6">
+            <div class="hover:animate-bounce">
+                <a href="{{ url_for('home') }}">Home</a>
+            </div>
+            <div class="hover:animate-bounce">
+                <a href="{{ url_for('about') }}">About</a>
+            </div>
+            <div class="hover:animate-bounce">
+                <a href="https://github.com/criiptico">GitHub</a>
+            </div>
+            <div class="hover:animate-bounce">
+                <a href="https://www.linkedin.com/in/adrian-quiroz/">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center py-3">
+        <hr class="w-[43%] h-2 bg-gray-200 border-0 rounded dark:bg-[#E6E6E6] ">
+    </div>
 </header>
 
-<body>
-    <div class="evaluating-pokemon">
-        <h1>Evaluate Pokemon:</h1>
-        <form method="GET" action="{{ url_for('evaluate_pokemon') }}">
-            <input type="text" name="pokemon_1" placeholder="Enter Pokemon 1">
-            <input type="text" name="pokemon_2" placeholder="Enter Pokemon 2">
-            <button type="submit">Evaluate Pokemon</button>
-                <h3 style="padding: 5px;height: 25px; background-color: #931011; position: absolute; -webkit-transition: opacity .4s ease .4s;
-                transition: opacity .4s ease .4s;">Please enter a valid Pokemon name.</h3>
-        </form>
+<body class="overflow-auto">
+    <!-- User input and the output -->
+    <div class="h-10"></div>
+    <div class="grid grid-flow-col px-20">
+        <!-- User input -->
+            <form class="overflow-auto" method="GET" action="{{ url_for('evaluate_pokemon') }}">
+                    <div class="grid grid-flow-row-5 gap-y-5">
+                    <strong class="text-xl place-self-center text-center w-5/11">Get the best moves against each Pokémon!</strong>
+                    <!-- Pokemon Images and Input -->
+                    <div class="rounded-lg grid grid-cols-2 auto-rows-[300px] place-self-center w-9/12 hover:drop-shadow-md drop-shadow-xl" style="background-color: #E6E6E6;">
+                        <div class="flex flex-col items-center justify-center ">
+                            <img class="m-7" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                            <strong><label style="text-transform: capitalize;">Pokémon 1</label></strong>
+                            <input class="rounded-sm ring-2 ring-slate-50 selection:ring-slate-500" type="text" name="pokemon_1" placeholder="{{ pokemon1 }}">
+                        </div>
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="m-7" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                                <strong><label style="text-transform: capitalize;">Pokémon 2</label></strong>
+                                <input class="rounded-sm ring-2 ring-slate-50 selection:ring-slate-500" type="text" name="pokemon_2" placeholder="{{ pokemon2 }}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button style="background-color: #931011; color: #EDEEEF;" class="rounded-md place-self-center text-center w-4/12" type="submit">Evaluate Pokémon</button>
+                    <div class="flex items-center justify-center">Please be patient, this may take up to 2 minutes.</div>
+                    <div class="w-80 place-self-center flex items-center justify-center bg-[#931011] text-[#EDEEEF]">Please enter a valid Pokemon name.</div>
+                </div>
+            </form>
+        <br />
+        <br />
+
+        <!-- Output -->
+        <div class="grid-flow-row">
+            <div class="rounded-lg grid grid-rows-4-auto auto-cols-auto place-self-center w-9/12 h-80 hover:drop-shadow-md drop-shadow-xl" style="background-color: #E6E6E6;"> 
+                <div class="h-5"></div>
+                <img class="place-self-center" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                <strong style="text-transform: capitalize;" class="place-self-center">Pokémon 1</strong>
+                <p style="text-transform: capitalize;" class="place-self-center">Pokémon 1's effective moves against Pokémon 2</p>
+                <div style="text-transform: capitalize;" class="pokemon_1 max-h-48 bg-[#1E1E1E] text-[#EDEEEF]">Move list...</div>
+            </div> <!-- pokemon1's effective moves against pokemon2 are stored in index 1 -->
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class=" rounded-lg grid grid-rows-4-auto auto-cols-auto place-self-center w-9/12 h-80 hover:drop-shadow-md drop-shadow-xl" style="background-color: #E6E6E6;"> 
+                <div class="h-5"></div>
+                <img class="place-self-center" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                <strong style="text-transform: capitalize;" class="place-self-center">Pokémon 2</strong>
+                <p style="text-transform: capitalize;" class="place-self-center">Pokémon 2's effective moves against Pokémon 1</p>
+                <div style="text-transform: capitalize;" class="pokemon_2 max-h-48 bg-[#1E1E1E] text-[#EDEEEF]">Move list...</div> 
+            </div> <!-- pokemon2's effective moves against pokemon1 are stored in index 0 -->
+        </div>
     </div>
-    <!-- TODO: Use CSS to - move these buttons to the left side and to style them -->
-    <!-- TODO: Use CSS to - add popup below these buttons signaling invalid input -->
     
+    <div class="h-40"></div>
 </body>
+
+<footer class="bg-[#1E1E1E] h-32">
+    <div class="h-7"></div>
+        <div class="py-15 columns-3 font-normal text-lg gap-32 flex items-center justify-center hover:underline" style="color:#E6E6E6">
+            <a class="row-auto" href="{{ url_for('about') }}">
+                <div class="flex items-center justify-center">
+                    <img src="../static/assets/images/about.png">
+                </div>
+                <div>About</div>
+            </a>
+            <a class="row-auto" href="https://github.com/criiptico">
+                <div class="flex items-center justify-center">
+                    <img src="../static/assets/images/github.png">
+                </div>
+                <div>
+                    GitHub
+                </div>
+            </a>
+            <a class="row-auto" href="https://www.linkedin.com/in/adrian-quiroz/">
+                <div class="flex items-center justify-center">
+                    <img src="../static/assets/images/linkedin.png">
+                </div>
+                <div>
+                    LinkedIn
+                </div>
+            </a>
+        </div>
+</footer>
 </html>
