@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./templates/*.html"],
   theme: {
-    extend: {},
+    fontFamily: {
+      'Iter': ['Iter', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        'poke-dark-grey': '#E6E6E6',
+      }
+    },
   },
   plugins: [],
 }
