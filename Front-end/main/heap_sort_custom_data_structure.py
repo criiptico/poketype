@@ -1,6 +1,6 @@
 # from ...PokeTypeAdvantage.main.Move import Move
 import sys
-sys.path.insert(0, '../../PokeTypeAdvantage/main')
+sys.path.insert(0, '../../PokeTypeAdvantage/PokeTypeAdvantage')
 import Move
 
 

@@ -8,6 +8,10 @@ setup(
     author_email='adrianquiroz166@gmail.com',
     description='A package for evaluating Pokémon type advantages',
     install_requires=['pydantic', 'requests'],
-    python_requires='>=3.10.12'
-    
+    python_requires='>=3.10.12',
+    # entry_points={
+    #     'console_scripts': [
+    #         'poketypeadvantage=poketypeadvantage.poketypeadvantage:main',
+    #     ],
+    # },
 )
