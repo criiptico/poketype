@@ -1,5 +1,11 @@
 # Notes:
 
+## _5-19-24_ Done. ✅
+I can't believe it's finally done. It doesn't help that I'm listening to a sad song while typing this. 
+I'm just glad, happy, and excited that I was able to finish it. I found different paths of doing it, but I did it.
+I'm not sure how the next one will turn out nor what it will be, but I hope it'll be awesome. Until next time poketype
+repo. Your soul developer, criiptico (Adrian). ❤️
+
 #### _5-09-24_
 The project is nearing completion, I'm working on the header, footer, and researching how to use firebase. [This 
 tutorial looked good for firebase](https://firebase.google.com/docs/hosting/quickstart).

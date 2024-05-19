@@ -1,20 +1,38 @@
 # Poketype:
 Poketype is a web-application that takes two pokemon and gives you the most effective move in terms of move type and damage dealt to each pokemon.
 
-###### Please note: This is a work in progress build and I'm learning these technologies along the way. This is my first time dealing with python, html forms, and Flask in the context of a web application. I appreciate your patience.
+## The project is now **live**
+Click here http://criiptico.pythonanywhere.com/ to view the build.
 
-## Note:
-~~- Front end development will continue when the back end (prototype) is functioning.~~
-- Hosting will be done through Firebase with Flask instead of GitHub
+## Want to run this app locally?
+To run this app locally, from the main directory go to `poketype/Front-end/main`, then run the `home.py` file.
 
-### Milestones:
+## Reflection:
+The pokemon PokeType web-app is finally up! I hope you enjoy using it as much as I did creating it.
+For my first web-app project, I think I did pretty well. I identified a problem and decided that this was a good solution to it,
+then I tried to stick to it without changing it too much, then I finally finished it.
+
+Working on this project has been awesome but I wish I had more wiggle room to experiment with threads and integrate
+Javascript into the application. The issue was that I didn't want to introduce Javascript because I don't know it, but I know
+that I want to use it for sure in my next project "YouTube Purger", an app that unsubscribes you from youtube channels.
+Another reason why I didn't use Javascript was because I wasn't sure how threads was going to interact with wherever I 
+was going to deploy my application. This was a huge issue because I can't assume something if I've never worked with it before.
+I think I still have that worry, so I'll have to thoroughly research that topic for my next project.
+
+## Final Notes:
+This app will not be maintained but feel free to use this code in whichever code you might need it for.
+I especially encourage using the pokemon api wrapper that I made which you can access here https://github.com/criiptico/PokeTypeAdvantage. 
+This api wrapper is where I spent most of my time learning and debugging. 
+It has useful info on serialization, retrieval, and processing json from the PokeApi which can be found here https://pokeapi.co/.
+
+
+
+##### Milestones:
 - [x] Back-end
-- [ ] Hosting and Development
+- [x] Hosting and Development
 - [x] Front-end
 
-## TODO:
-As of now, I'm planning on making a prototype and then following it up with a more in depth implementation in the web version.
-
+##### TODO:
 + Back-end
     - [x] Implementing Move and Pokemon class into all functions.
     - [x] API related
@@ -81,8 +99,8 @@ As of now, I'm planning on making a prototype and then following it up with a mo
                     - [x] Calculative and dynamic data
                     - [x] Figure out how to send it back
                     - [x] Figure out how to output data onto client
-    - [ ] Find a way to host on Firebase
-    - [ ] Purchase a domain - Build around a "portfolio" website. Ex. portfolio.com/poketype, portfolio.com/about, etc.
+    ~~- [ ] Find a way to host on Firebase~~
+    ~~- [ ] Purchase a domain - Build around a "portfolio" website. Ex. portfolio.com/poketype, portfolio.com/about, etc.~~
 
 + Front-end
     - [x] Web Design

@@ -16,7 +16,7 @@ from PokeTypeAdvantage import eval_pokemon, get_pokemon
 
 
 ## Source Code
-Most of the source code is located under PokeTypeAdvantage/main and contains these files:
+Most of the source code is located under PokeTypeAdvantage/PokeTypeAdvantage and contains these files:
 - poketypeadvantage.py
     + Contains abstracted functions that the user must use to make requests to the pokemon api.
 - Battle.py
