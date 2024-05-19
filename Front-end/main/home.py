@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
-import os
-from poketypeadvantage import eval_pokemon, get_pokemon
+import sys
+sys.path.append('../../PokeTypeAdvantage/PokeTypeAdvantage')
+from PokeTypeAdvantage import eval_pokemon, get_pokemon
 from heap_sort_custom_data_structure import heap_sort_custom
 
 app = Flask(__name__, template_folder="../templates/", static_folder="../static")

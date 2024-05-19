@@ -6,6 +6,14 @@ and to process it so that it takes the most effective move from one pokemon agai
 ## Pokemon Api used:
 https://pokeapi.co/
 
+## How to use:
+Due to issues with the package, include it into your project like this:
+```
+import sys
+sys.path.append('../../PokeTypeAdvantage/PokeTypeAdvantage')
+from PokeTypeAdvantage import eval_pokemon, get_pokemon
+```
+
 
 ## Source Code
 Most of the source code is located under PokeTypeAdvantage/main and contains these files:
