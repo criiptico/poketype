@@ -1,7 +1,10 @@
 # PokeTypeAdvantage
 
+
 This python package communicates with PokeApi endpoints to retrieve pokemon data
 and to process it so that it takes the most effective move from one pokemon against another.
+It was developed to be used in this project https://github.com/criiptico/poketype, but feel 
+free to use this and the project mentioned in any build you'd like.
 
 ## Pokemon Api used:
 https://pokeapi.co/
