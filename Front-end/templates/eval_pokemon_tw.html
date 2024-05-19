@@ -2,8 +2,11 @@
 <html>
 <title>PokeType | What's good against that pokemon if I have this pokemon?</title>
 <head>
-    <link href=”https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css”rel=”stylesheet”>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/eval_pokemon.css') }}">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <!-- https://tailwindcss.com/docs/installation  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/eval_pokemon_tw.css') }}">
+    <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/eval_pokemon.css') }}"> -->
     <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/output.css')}}"> -->
 </head>
 
@@ -12,7 +15,7 @@
 </header>
 
 <body>
-    {% macro output_pokemon(attacking_pokemon, defending_pokemon, pokemon_index) %}
+    <!-- {% macro output_pokemon(attacking_pokemon, defending_pokemon, pokemon_index) %}
         <div class="pokemon-title">{{ attacking_pokemon|title }}'s effective moves against {{ defending_pokemon|title }}</div>
         <div class="effectiveness-1">
             {% for move in efficacy[pokemon_index][0] %}
@@ -218,43 +221,89 @@
                 {% endif %}
             {% endfor %}
         </div>
-    {% endmacro %}
+    {% endmacro %} -->
+
+
+    <!-- User input and the output -->
+    <div class="columns-2 px-20">
+        <!-- User input -->
+        <!-- <div> -->
+            <!-- TODO: Use CSS to - move these buttons to the left side and to style them -->
+            <!-- <form method="GET" action="{{ url_for('evaluate_pokemon') }}">
+                <!-- <div class="flex flex-col">
+                <div class="flex flex-initial bg-neutral-100 border-2">
+                    <h1 class="">Evaluate Pokemon:</h1>
+                    <!-- Pokemon Images and Input 
+                    <!-- <div class="grid grid-rows-2 bg-neutral-200 border-2"> 
+                    <div class="grid grid-cols-2 auto-rows-[300px]">
+                        <div class="bg-neutral-100 border-2 flex flex-col items-center justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <img class="m-7" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                                    <input disabled type="text" name="pokemon_1" placeholder="{{ pokemon1 }}">
+                                </div>
+                            </div>
+                            <div class="bg-neutral-100 border-2 flex flex-col items-center justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <img class="m-7" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                                    <input disabled type="text" name="pokemon_2" placeholder="{{ pokemon2 }}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button disabled type="submit">Evaluate Pokemon</button>
+            </form> -->
+
+            <form class="overflow-auto" method="GET" action="{{ url_for('evaluate_pokemon') }}">
+                    <div class="grid grid-flow-row-4 gap-y-5 ">
+                    <h1 class="bg-neutral-100 border-2 text-center">Evaluate Pokemon:</h1>
+                    <!-- Pokemon Images and Input -->
+                    <div class="grid grid-cols-2 auto-rows-[300px] bg-neutral-100 border-2">
+                        <div class="flex flex-col items-center justify-center">
+                            <img class="m-7" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                            <input disabled type="text" name="pokemon_1" placeholder="{{ pokemon1 }}">
+                        </div>
+                        <div class="bg-neutral-100 border-2 flex flex-col items-center justify-center">
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="m-7" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96">
+                                <input disabled type="text" name="pokemon_2" placeholder="{{ pokemon2 }}">
+                            </div>
+                        </div>
+                    </div>
 
 
 
+                    <button class="bg-neutral-100 border-2" disabled type="submit">Evaluate Pokemon</button>
+                    <a class="bg-neutral-100 border-2 text-center" href="{{ url_for('home') }}"><button type="button">Evaluate Another Pokemon</button></a>
+                </div>
+            </form>
 
-    <div class="evaluating-pokemon">
-        <!-- TODO: Use CSS to - move these buttons to the left side and to style them -->
-        <h1>Evaluate Pokemon:</h1>
-        <form method="GET" action="{{ url_for('evaluate_pokemon') }}">
-            <input disabled type="text" name="pokemon_1" placeholder="{{ pokemon1 }}">
-            <input disabled type="text" name="pokemon_2" placeholder="{{ pokemon2 }}">
-            <button disabled type="submit">Evaluate Pokemon</button>
-        </form>
-    </div>
-    <!-- TODO: Use CSS to - Move 'pokemon-moves' div to the right side -->
-    <!-- TODO: Use CSS to - Style 'type_..' div background color -->
-    <!-- TODO: Use CSS to - Style the whole 'move' div -->
-    <br />
-    <br />
 
-    <div class="grid grid-cols-2">
-        <img class="pokemon-image" src="{{ pokemon_1_sprite }}" width="96" height="96">
-        <img class="pokemon-image" src="{{ pokemon_2_sprite }}" width="96" height="96">
-    </div>
-    <div class="pokemon-moves">
-        <div class="pokemon_1"> {{output_pokemon(pokemon1, pokemon2, 1)}} </div> <!-- pokemon1's effective moves against pokemon2 are stored in index 1 -->
+
+            <!--This button appears only after an evaluation, it redirects to the home.html file.-->
+        <!-- TODO: Use CSS to - Move 'pokemon-moves' div to the right side -->
+        <!-- TODO: Use CSS to - Style 'type_..' div background color -->
+        <!-- TODO: Use CSS to - Style the whole 'move' div -->
         <br />
         <br />
-        <div class="pokemon_2"> {{output_pokemon(pokemon2, pokemon1, 0)}} </div> <!-- pokemon2's effective moves against pokemon1 are stored in index 0 -->
-    </div>
-    
-    <!-- </div> -->
-    <br />
-    <br />
 
-    <!--This button appears only after an evaluation, it redirects to the home.html file.-->
-    <a href="{{ url_for('home') }}"><button type="button">Evaluate Another Pokemon</button></a>
-    
+        
+        <!-- Output -->
+        <div class="columns-2">
+            <div> 
+                <img class="pokemon-image" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96"> 
+                <strong>{{ pokemon1 }}</strong>
+                {{output_pokemon(pokemon1, pokemon2, 1)}} 
+            </div> <!-- pokemon1's effective moves against pokemon2 are stored in index 1 -->
+            <div class="pokemon_2"> 
+                <img class="pokemon-image" src="../static/assets/images/no_pokemon_asset.jpg" width="96" height="96"> 
+                <strong>{{ pokemon2 }}</strong>
+                {{output_pokemon(pokemon2, pokemon1, 0)}} 
+            </div> <!-- pokemon2's effective moves against pokemon1 are stored in index 0 -->
+        </div>
+        
+        <!-- </div> -->
+        <br />
+        <br />
+    </div>
 </body>
 </html>
